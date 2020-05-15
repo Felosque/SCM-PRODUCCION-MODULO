@@ -1,0 +1,110 @@
+:root {
+    --color-principal: #0f1f39;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #header {
+    background: var(--color-principal);
+    padding: 20px;
+    position: relative;
+  
+  }
+  
+  #menu > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  
+  #menu > ul > li {
+    list-style: none;
+    padding: 5px;
+    color: #FFFFFF;
+  }
+  
+  #menu > ul > li > a {
+    text-decoration: none;
+  }
+  
+  #menu > ul > li > a:visited {
+    color: #FFFFFF;
+  
+  }
+  
+
+.cont-padre{
+  width: 70%;
+  margin: 50px auto;
+}
+
+.tab-head {
+  width: 100%;
+  background: var(--color-principal);
+}
+
+.tab-head h2 {
+  text-align: center;
+  color: #FFFFFF;
+  padding: 10px;
+}
+
+table{
+  width: 100%;
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+.tab-body{
+  width: 100%;
+  
+}
+.tab{
+  width: 100%;
+  
+}
+
+.tab tr th {
+  padding: 5px;
+}
+
+thead{
+  border-bottom: 4px solid #0000;
+}
+tr th {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  border-spacing: 0px !important;
+}
+
+
+#btn-ver {
+  background-color: #2E64FE;
+  padding: 8px;
+  border-color: #2E64FE;
+  border-radius: 3px;
+  color: #FFFFFF;
+  width: 100px;
+}
+
+#btn-edit {
+  background-color: #18a43a;
+  padding: 8px;
+  border-color: #18a43a;
+  border-radius: 3px;
+  color: #FFFFFF;
+  width: 100px;
+}
+
+#btn-delete {
+  background-color: #be1616;
+  padding: 8px;
+  border-color: #be1616;
+  border-radius: 3px;
+  color: #FFFFFF;
+  width: 100px;
+}
+
