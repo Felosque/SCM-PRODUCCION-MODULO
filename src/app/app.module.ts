@@ -5,6 +5,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { ShowComponent } from './components/crud/show/show.component';
+import { CreateComponent } from './components/crud/create/create.component';
+import { DialogContentComponent } from './components/crud/dialog-content/dialog-content.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -12,11 +16,15 @@ import { ShowComponent } from './components/crud/show/show.component';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ShowComponent
+    ShowComponent,
+    CreateComponent,
+    DialogContentComponent
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
