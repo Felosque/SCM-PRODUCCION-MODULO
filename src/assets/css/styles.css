@@ -1,0 +1,245 @@
+:root {
+    --color-principal: #0f1f39;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #header {
+    background: var(--color-principal);
+    padding: 20px;
+    position: relative;
+  
+  }
+  
+  #menu > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  
+  #menu > ul > li {
+    list-style: none;
+    padding: 5px;
+    color: #FFFFFF;
+  }
+  
+  #menu > ul > li > a {
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  #menu > ul > li > a:visited {
+    color: #FFFFFF;
+  
+  }
+
+.fas{
+  font-size: 23px;
+}
+
+.cont-padre{
+  width: 70%;
+  margin: 50px auto;
+}
+
+.tab-head {
+  width: 100%;
+  background: var(--color-principal);
+}
+
+.tab-head h2 {
+  text-align: center !important;
+  color: #FFFFFF !important;
+  padding: 10px !important;
+}
+
+table{
+  width: 100% !important;
+  border: 1px solid #000 !important;
+  border-collapse: collapse !important;
+}
+.tab-body{
+  width: 100% !important;
+  
+}
+.tab{
+  width: 100% !important;
+  
+}
+
+.tab tr th {
+  padding: 5px !important;
+}
+
+thead{
+  border-bottom: 4px solid #0000 !important;
+}
+tr th {
+  border: 1px solid #000 !important;
+  border-collapse: collapse !important;
+  border-spacing: 0px !important;
+}
+
+#btn-ver {
+  background-color: #2E64FE !important;
+  padding: 8px !important;
+  border-color: #2E64FE !important;
+  border-radius: 3px !important;
+  color: #FFFFFF !important;
+  width: 100px !important;
+  margin: auto !important;
+  margin-left: 30% !important;
+}
+
+#btn-edit {
+  background-color: #18a43a !important;
+  padding: 8px !important;
+  border-color: #18a43a !important;
+  border-radius: 3px !important;
+  color: #FFFFFF !important;
+  width: 100px !important;
+  margin: auto !important;
+}
+
+#btn-del {
+  background-color: #be1616 !important;
+  padding: 8px !important;
+  border-color: #be1616 !important;
+  border-radius: 3px !important;
+  color: #FFFFFF !important;
+  width: 100px !important;
+  flex-direction: row;
+  margin: auto !important;
+  font-size: 14px;
+}
+
+.btn-agregar{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2px;
+  margin-bottom: 2px;
+
+}
+
+.btn-agregar .bn {
+  padding: 8px;
+  background: #349744;
+  border-radius: 4px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.me {
+  width: 600px !important;
+}
+
+.formu{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.formu .head-form{
+  background: #0f1f39;
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.formu .head-form h2 {
+  margin-top: 2%;
+}
+
+.form-edit {
+  
+  width: 25%;
+  margin: 7% auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-head {
+  background: #0f1f39;
+  color: #FFFFFF;
+  width: 100%;
+  text-align: center;
+} 
+
+.form-head h2 {
+  margin-top: 10px;
+}
+.form-body-edit {
+  padding: 10px;
+  border: 1px solid #DDDDDD;
+}
+.form-body-edit form{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-body-edit form label {
+  margin-bottom: 5px;
+}
+
+.form-body-edit  form input[type="text"]{
+  margin-bottom: 10px;
+}
+
+.form-body-edit form button{
+  width: 25%;
+  margin: auto;
+  margin-top: 15px;
+}
+.bn-cancel {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cont-card{
+  
+  width: 28%;
+  margin: 8% auto;
+}
+
+.card-head{
+  background: #0f1f39;
+  padding: 4%;
+  text-align: center;
+}
+
+.card-head h2 {
+  margin-top: 8px;
+  color: #FFFFFF;
+}
+
+.card-body {
+  border: 1px solid #DDDDDD;
+  
+}
+.card-body h3 {
+  font-size: 25px;
+}
+
+.card-btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.slider{
+  margin-top: 28%;
+  width: 100%;
+  background: #0f1f39;
+  color: #FFFFFF;
+}
+
+.slider marquee{
+  font-size: 28px;
+  padding: 2%;
+}
