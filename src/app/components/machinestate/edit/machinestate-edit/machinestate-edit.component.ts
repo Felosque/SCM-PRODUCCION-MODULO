@@ -31,8 +31,6 @@ export class MachinestateEditComponent implements OnInit {
     this.getMachineState();
   }
   save(){
-
-
     swal({
       title: "Estas seguro que deseas Actualizarlo?",
       text: "cuidado estas apundo de actualizar un registro",

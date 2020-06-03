@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Global } from 'src/app/services/global';
 import { BranchofficeService } from 'src/app/services/branchoffice.services'
 import { Branchoffice } from 'src/app/model/branchoffice';
+import swal from 'sweetalert';
 @Component({
   selector: 'app-branchoffice-edit',
   templateUrl: './branchoffice-edit.component.html',
@@ -31,13 +32,29 @@ export class BranchofficeEditComponent implements OnInit {
   }
 
   save(){
+    swal({
+      title: "Estas seguro que deseas Actualizarlo?",
+      text: "cuidado estas apundo de actualizar un registro",
+      icon: "info",
+      buttons: [true,true],
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        swal("Se Actualizo Correctamente", {
+          icon: "success",
+        });
     this._branchofficeService.updateBranchoffice(this.branchoffice.code,this.branchoffice).subscribe(response=>{
       this.status = 'success';
       this.branchoffice = response.branchoffice;
       alert("Se Actualizo Correctamente");
       this._router.navigate(['/branchoffice'])
     })
+  } else {
+    swal("Tranquilo/a su registro no se ha Actualizado");
   }
+});
+}
 
   getBranchoffice(){
     this._route.params.subscribe(params=>{

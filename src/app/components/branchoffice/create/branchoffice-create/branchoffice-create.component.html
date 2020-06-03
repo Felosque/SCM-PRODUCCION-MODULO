@@ -8,20 +8,30 @@
           <div class="p-3">
             <div class="col p-1">
               <label>direccion</label>
-              <input type="text" name="direccion" #direccion="ngModel" [(ngModel)]="branchoffice.address" class="form-control" placeholder="escriba la direccion">
+              <input type="text" name="direccion" #direccion="ngModel" 
+              [(ngModel)]="branchoffice.address" class="form-control" 
+              placeholder="escriba la direccion" required>
+              <small *ngIf="!direccion.valid && direccion.touched" style="color: red;">
+                Direccion invalida
+            </small>
             </div>
 
             <div class="col p-1">
               <label>Nit</label>
-              <input type="text" name="nit" #nit="ngModel" [(ngModel)]="branchoffice.enterpriseNit" class="form-control" placeholder="escriba el nit de la sucursal">
+              <input type="text" name="nit" #nit="ngModel" 
+              [(ngModel)]="branchoffice.enterpriseNit" class="form-control" 
+              placeholder="escriba el nit de la sucursal" required pattern="[0-9]+">
+              <small *ngIf="!nit.valid && nit.touched" style="color: red;">
+                nit invalida
+            </small>
+            
             </div>
 
-            <div class="col p-1">
-              <!-- <label>descripcion Estado</label>
-              <input type="number" name="descripcionstate" #descriptionstate="ngModel" [(ngModel)]="branchoffice.stateBranchOffice" class="form-control" placeholder="escriba la direccion"> -->
+            <div class="col p-1">    
               <mat-form-field>
                 <mat-label>descripcion estado</mat-label>
-                <mat-select name="descripcion" #descriptionstate="ngModel" [(ngModel)]="branchoffice.stateBranchOffice">
+                <mat-select name="descripcion" #descriptionstate="ngModel" 
+                [(ngModel)]="branchoffice.stateBranchOffice" required >
                   <mat-option *ngFor="let liststate of liststateBranchOffice" [value]="liststate">
                     {{liststate.description}}
                   </mat-option>
@@ -29,7 +39,7 @@
               </mat-form-field>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary">Guardar</button>
+          <button type="submit" class="btn btn-primary" [disabled]="branchofficeForm.invalid">Guardar</button>
         </form>
       </div>
     </div>

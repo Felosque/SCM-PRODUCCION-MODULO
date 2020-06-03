@@ -5,15 +5,17 @@
     <div class="form-body-edit">
         <form #branchofficeForm="ngForm" (ngSubmit)="save()">
             <label>Direccion</label>
-            <input name="address" #address="ngModel" [(ngModel)]="branchoffice.address">
+            <input name="address" #address="ngModel" [(ngModel)]="branchoffice.address" required>
+            <small *ngIf="!address.valid && address.touched" style="color: red;">
+                Direccion invalida
+            </small>
             <label>Nit</label>
-            <input name="enterpriseNit" #enterpriseNit="ngModel" [(ngModel)]="branchoffice.enterpriseNit">
-            <!--<label></label>
-             <input name="description" #description="ngModel" [(ngModel)]="branchoffice.stateBranchOffice.code"> -->
-
-            
-            
-            <button type="submit" class="btn btn-primary">Actualizar</button>           
+            <input name="enterpriseNit" #enterpriseNit="ngModel" 
+            [(ngModel)]="branchoffice.enterpriseNit" required pattern="[0-9]+">
+            <small *ngIf="!enterpriseNit.valid && enterpriseNit.touched" style="color: red;">
+                Nit invalida solo se aceptan numeros
+            </small>            
+            <button type="submit" class="btn btn-primary" [disabled]="branchofficeForm.invalid">Actualizar</button>           
         </form>
         <div class="bn-cancel">
             <button type="submit" class="btn btn-info c" [routerLink]="['/branchoffice']">Cancelar</button>

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Requeststate } from 'src/app/model/requeststatus';
 import { RequeststateService } from 'src/app/services/requeststatus.services';
-
+import swal from 'sweetalert';
 @Component({
   selector: 'app-requeststatus-create',
   templateUrl: './requeststatus-create.component.html',
@@ -17,21 +17,32 @@ export class RequeststatusCreateComponent implements OnInit {
     private router: Router,
     private requestateService: RequeststateService
   ) {
-    this.requeststatus = new Requeststate(null,"");
+    this.requeststatus = new Requeststate(null, "");
     this.page_title = 'Crear Request Status'
     this.btn = 'Guardar'
-   }
+  }
 
   ngOnInit(): void {
   }
 
-  save(){
-    this.requestateService.addRequestStates(this.requeststatus).subscribe(response=>{
-      this.status = 'success';
-      alert("Se agrego correctamente");
-      location.reload(true);
-      this.requeststatus = response.requeststatus;
-      this.router.navigate(['/Requeststatus']);
+  save() {
+    this.requestateService.addRequestStates(this.requeststatus).subscribe(response => {
+      if (this.status = 'success') {
+        swal(
+          'Estado de la maquina creada!!',
+          'El estado de la maquina se ha creado correctamente',
+          'successs'
+        );
+        this.requeststatus = response.requeststatus;
+        this.router.navigate(['/Requeststatus']);
+      } else {
+        this.status = 'error';
+        swal(
+          'Estado de la maquina creada!!',
+          'El estado de la maquina no se ha creado correctamente :(',
+          'error'
+        );
+      } location.reload(true);
     })
   }
 }

@@ -35,6 +35,13 @@ import { BranchofficeShowComponent } from './components/branchoffice/show/branch
 import { BranchofficeShowOneComponent } from './components/branchoffice/show/branchoffice-show-one/branchoffice-show-one.component';
 import { MatOptionModule } from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
+import { ProductComponent } from './components/product/product.component';
+import { CreateProductComponent } from './components/product/create-product/create-product.component';
+import { EditProductComponent } from './components/product/edit-product/edit-product.component';
+import { ShowProductOneComponent } from './components/product/show-product-one/show-product-one.component';
+import { ShowProductAllComponent } from './components/product/show-product-all/show-product-all.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,7 +71,12 @@ import {MatSelectModule} from '@angular/material/select';
     BranchofficeCreateComponent,
     BranchofficeEditComponent,
     BranchofficeShowComponent,
-    BranchofficeShowOneComponent
+    BranchofficeShowOneComponent,
+    ProductComponent,
+    CreateProductComponent,
+    EditProductComponent,
+    ShowProductOneComponent,
+    ShowProductAllComponent
   ],
   imports: [
     BrowserModule,
@@ -74,8 +86,10 @@ import {MatSelectModule} from '@angular/material/select';
     BrowserAnimationsModule,
     MatDialogModule,
     MatOptionModule,
-    MatSelectModule
-    
+    MatSelectModule,
+    MatIconModule,
+    MatTableModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
