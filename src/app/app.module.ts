@@ -35,13 +35,14 @@ import { BranchofficeShowComponent } from './components/branchoffice/show/branch
 import { BranchofficeShowOneComponent } from './components/branchoffice/show/branchoffice-show-one/branchoffice-show-one.component';
 import { MatOptionModule } from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
-import { ProductComponent } from './components/product/product.component';
-import { CreateProductComponent } from './components/product/create-product/create-product.component';
-import { EditProductComponent } from './components/product/edit-product/edit-product.component';
-import { ShowProductOneComponent } from './components/product/show-product-one/show-product-one.component';
-import { ShowProductAllComponent } from './components/product/show-product-all/show-product-all.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
+import { ProductCreateComponent } from './components/product/create/product-create/product-create.component';
+import { ProductDialogComponent } from './components/product/create/product-dialog/product-dialog.component';
+import { ProductShowComponent } from './components/product/show/product-show/product-show.component';
+import { ProductEditComponent } from './components/product/edit/product-edit/product-edit.component';
+import { ProductShowOneComponent } from './components/product/show/product-show-one/product-show-one.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,11 +73,11 @@ import {MatTableModule} from '@angular/material/table';
     BranchofficeEditComponent,
     BranchofficeShowComponent,
     BranchofficeShowOneComponent,
-    ProductComponent,
-    CreateProductComponent,
-    EditProductComponent,
-    ShowProductOneComponent,
-    ShowProductAllComponent
+    ProductCreateComponent,
+    ProductDialogComponent,
+    ProductShowComponent,
+    ProductEditComponent,
+    ProductShowOneComponent
   ],
   imports: [
     BrowserModule,

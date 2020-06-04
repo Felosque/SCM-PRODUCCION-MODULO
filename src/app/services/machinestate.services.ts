@@ -39,5 +39,4 @@ export class MachinestateService {
         let headers = new HttpHeaders().set('Content-Type', 'application/json');
         return this._http.delete(this.url+'machinestate/'+code, {headers:headers});
     }
-
 }
