@@ -12,7 +12,6 @@ import swal from 'sweetalert';
 export class ProductShowComponent implements OnInit {
 
   public products: Product[] = [];
-  public title: 'Datos Productos';
 
   constructor(private productService: ProductService,
               private route: ActivatedRoute,
