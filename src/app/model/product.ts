@@ -1,4 +1,5 @@
-export interface Product {
-  code: number;
-  name: string;
+export class Product {
+  constructor(public  code: number,
+              public name: string) {
+  }
 }
