@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import {ProcessCreateComponent} from '../process-create/process-create.component';
 
 @Component({
   selector: 'app-process-dialog',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProcessDialogComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  openDialog(): void{
+
+    const dialogRef = this.dialog.open(ProcessCreateComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
 }
