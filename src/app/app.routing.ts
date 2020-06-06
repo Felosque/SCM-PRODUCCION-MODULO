@@ -19,6 +19,10 @@ import {BranchofficeEditComponent} from './components/branchoffice/edit/branchof
 import {ProductShowComponent} from './components/product/show/product-show/product-show.component';
 import {ProductShowOneComponent} from './components/product/show/product-show-one/product-show-one.component';
 import {ProductEditComponent} from './components/product/edit/product-edit/product-edit.component';
+import {ProcessShowComponent} from './components/process/show/process-show/process-show.component';
+import {ProcessShowOneComponent} from './components/process/show/process-show-one/process-show-one.component';
+import {ProcessCreateComponent} from './components/process/create/process-create/process-create.component';
+import {ProcessEditComponent} from './components/process/edit/process-edit/process-edit.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -40,7 +44,10 @@ const appRoutes: Routes = [
   {path: 'branchoffice/:code', component: BranchofficeEditComponent},
   {path: 'product', component: ProductShowComponent},
   {path: 'product/show/:code', component: ProductShowOneComponent},
-  {path: 'product/:code', component: ProductEditComponent}
+  {path: 'product/:code', component: ProductEditComponent},
+  {path: 'process', component: ProcessShowComponent},
+  {path: 'process/show/:code', component: ProcessShowOneComponent},
+  {path: 'process/:code', component: ProcessEditComponent}
 ];
 
 

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {routing, appRoutingProviders} from './app.routing';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule}from '@angular/forms';
+import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
@@ -42,6 +42,11 @@ import { ProductDialogComponent } from './components/product/create/product-dial
 import { ProductShowComponent } from './components/product/show/product-show/product-show.component';
 import { ProductEditComponent } from './components/product/edit/product-edit/product-edit.component';
 import { ProductShowOneComponent } from './components/product/show/product-show-one/product-show-one.component';
+import { ProcessShowComponent } from './components/process/show/process-show/process-show.component';
+import { ProcessShowOneComponent } from './components/process/show/process-show-one/process-show-one.component';
+import { ProcessCreateComponent } from './components/process/create/process-create/process-create.component';
+import { ProcessDialogComponent } from './components/process/create/process-dialog/process-dialog.component';
+import { ProcessEditComponent } from './components/process/edit/process-edit/process-edit.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +82,12 @@ import { ProductShowOneComponent } from './components/product/show/product-show-
     ProductDialogComponent,
     ProductShowComponent,
     ProductEditComponent,
-    ProductShowOneComponent
+    ProductShowOneComponent,
+    ProcessShowComponent,
+    ProcessShowOneComponent,
+    ProcessCreateComponent,
+    ProcessDialogComponent,
+    ProcessEditComponent,
   ],
   imports: [
     BrowserModule,
