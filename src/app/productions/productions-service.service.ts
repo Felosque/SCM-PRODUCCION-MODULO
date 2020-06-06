@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Productions} from './productions'
-import { Time } from '@angular/common';
 export class ProductionsClass{
   constructor(
     public createDate: String,
@@ -18,7 +17,7 @@ export class ProductionsClass{
  export class ProductionsService {
 
     constructor(private service: HttpClient) { }
-    readonly url = 'http://localhost:8080/crm-unibague/Production/'
+    readonly url = 'http://localhost:8089/scm-unibague/Production/'
     getAll(){
       return this.service.get<Productions[]>(this.url);
     }

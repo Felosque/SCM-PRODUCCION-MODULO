@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {Productions} from '../../productions'
 import {ProductionsService, ProductionsClass} from '../../productions-service.service'
+import { Router, ActivatedRoute } from '@angular/router';
+import {DateAdapter} from '@angular/material/core';
+import { MatDialog } from "@angular/material/dialog";
+import {DialogActionComponent} from '../dialog/dialog-action/dialog-action.component'
+
 @Component({
   selector: 'app-edit-productions',
   templateUrl: './edit-productions.component.html',
@@ -9,39 +14,78 @@ import {ProductionsService, ProductionsClass} from '../../productions-service.se
 export class EditProductionsComponent implements OnInit {
   expirationDate = new Date();
   createDate = new Date();
+  public status: String;
   startOrderDate = new Date();
   time: String;
-  listDataProductions: Productions
-  constructor(private productionsService: ProductionsService) { }
+  listDataProductions: Productions;
+  code: Number;
+  public page_title: String;
+  public btn: String;
+
+  constructor(private productionsService: ProductionsService,private _router: Router,
+    private _route: ActivatedRoute, private dateAdapter: DateAdapter<any>, public dialogo: MatDialog) { this.page_title = 'Editar Lote';
+    this.btn = 'Actualizar';}
 
   ngOnInit(): void {
+    this.getById();
+    this.dateAdapter.setLocale("es-co")
+   
   }
-  edit(id): void{
-    var productions = new ProductionsClass( this.createDate.toLocaleDateString() + " " +this.createDate.toLocaleTimeString(), this.expirationDate.toLocaleDateString() + " "+ this.expirationDate.toLocaleTimeString(), this.startOrderDate.toLocaleDateString() + " "+ this.startOrderDate.toLocaleTimeString(), this.time+":00" );
-    console.log(productions)
-    this.productionsService.update(id,productions)
+  showDialogSuccesful(): void {
+    this.dialogo
+    .open(DialogActionComponent, {
+      data: `Actualizado con Exito`
+    })
+    .afterClosed()
+  }
+  showDialogError(): void {
+    this.dialogo
+    .open(DialogActionComponent, {
+      data: `Error. No se ha actualizado el elemento.`
+    })
+    .afterClosed()
+  }
+  edit(): void{
+    var productions = new ProductionsClass( this.createDate.toLocaleDateString() + " " +this.createDate.toLocaleTimeString(), this.expirationDate.toLocaleDateString() + " "+ this.expirationDate.toLocaleTimeString(), this.startOrderDate.toLocaleDateString()  + " "+ this.startOrderDate.toLocaleTimeString(), this.time);
+    this.productionsService.update(this.code,productions)
     .subscribe(
       data => {
-        //this.mostrarDialogoAction();
-        /*
-        window.setTimeout(() => {
-          location.reload()
-         }, 1500)
-         */
+        if (this.status = 'success') {
+          this.showDialogSuccesful()
+          this.status = 'succes';
+          this._router.navigate(['/productions'])
+        }else{
+          this.showDialogError()
+        }
+      },
+      error => {
+        this.showDialogError()
       }
     )
   }
-  getById(id){
-    this.productionsService.getById(id)
-    .subscribe(
-      data => {
-        this.listDataProductions = data;
-        this.expirationDate = new Date(this.listDataProductions.expirationDate.toString())
-        this.createDate = new Date(this.listDataProductions.createDate.toString())
-        this.startOrderDate = new Date(this.listDataProductions.startOrderDate.toString())
-        this.time = this.listDataProductions.time;
-      }
-      
-    )
+  getById(){
+    this._route.params.subscribe(params => {
+      let code = params['code'];
+      this.productionsService.getById(code).subscribe(
+        data => {
+          this.listDataProductions = data;
+          this.code = this.listDataProductions.code;
+          let createExpirationDate = this.listDataProductions.expirationDate.split("/")
+          this.expirationDate = new Date(parseInt(createExpirationDate[2]), parseInt(createExpirationDate[1])-1, parseInt( createExpirationDate[0] ))
+          let createCreateDate = this.listDataProductions.createDate.split("/")
+          this.createDate = new Date(parseInt(createCreateDate[2]), parseInt(createCreateDate[1])-1, parseInt( createCreateDate[0] ));
+          let createStartOrderDate = this.listDataProductions.startOrderDate.split("/");
+          this.startOrderDate = new Date(parseInt(createStartOrderDate[2]), parseInt(createStartOrderDate[1])-1, parseInt( createStartOrderDate[0] ));
+          this.time = this.listDataProductions.time;
+        }, error => {
+          console.log(error);
+
+        }
+      )
+    })
+    
+  }
+  public onChange(event: any): void {
+    console.log(event.target.value);
   }
 }
