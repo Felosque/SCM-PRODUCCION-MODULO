@@ -36,6 +36,19 @@
               Stock invalido
             </small>
           </div>
+
+          <div class="col p-1">
+            <mat-form-field>
+              <mat-label>Productos</mat-label>
+              <mat-select name="porductos" #products="ngModel"
+                          [(ngModel)]="process.product" required >
+                <mat-option *ngFor="let product of listProducts" [value]="product">
+                  {{product.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
         </div>
         <button type="submit" class="btn btn-primary" [disabled]="processForm.invalid">{{btn}}</button>
       </form>
