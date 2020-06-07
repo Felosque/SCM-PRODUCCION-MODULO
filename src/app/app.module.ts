@@ -86,11 +86,6 @@ import { ProductShowOneComponent } from './components/product/show/product-show-
     BranchofficeShowComponent,
     BranchofficeShowOneComponent,
 
-    ProductComponent,
-    CreateProductComponent,
-    EditProductComponent,
-    ShowProductOneComponent,
-    ShowProductAllComponent,
     CreateWorkshiftComponent,
     EditWorkshiftComponent,
     ShowWorkshiftComponent,
@@ -100,8 +95,7 @@ import { ProductShowOneComponent } from './components/product/show/product-show-
     CreateHumanresourcesDialogComponent,
     EditHumanresourcesComponent,
     ShowOneHumanresourcesComponent,
-    ShowHumanresourcesComponent
-
+    ShowHumanresourcesComponent,
     ProductCreateComponent,
     ProductDialogComponent,
     ProductShowComponent,
