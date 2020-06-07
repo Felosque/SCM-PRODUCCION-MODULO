@@ -17,7 +17,7 @@ export class MachinestateShowOneComponent implements OnInit {
     private _macinestateService: MachinestateService,
     private _route: ActivatedRoute,
     private _router: Router
-  ) { 
+  ) {
     this.url = Global.url;
    }
 
@@ -33,5 +33,4 @@ export class MachinestateShowOneComponent implements OnInit {
       )
     })
   }
-
 }

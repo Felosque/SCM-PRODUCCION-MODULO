@@ -35,13 +35,9 @@ import { BranchofficeShowComponent } from './components/branchoffice/show/branch
 import { BranchofficeShowOneComponent } from './components/branchoffice/show/branchoffice-show-one/branchoffice-show-one.component';
 import { MatOptionModule } from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
-import { ProductComponent } from './components/product/product.component';
-import { CreateProductComponent } from './components/product/create-product/create-product.component';
-import { EditProductComponent } from './components/product/edit-product/edit-product.component';
-import { ShowProductOneComponent } from './components/product/show-product-one/show-product-one.component';
-import { ShowProductAllComponent } from './components/product/show-product-all/show-product-all.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
+
 import { CreateWorkshiftComponent } from './components/workShifts/create-workshift/create-workshift.component';
 import { EditWorkshiftComponent } from './components/workShifts/edit-workshift/edit-workshift.component';
 import { ShowWorkshiftComponent } from './components/workShifts/show-workshift/show-workshift.component';
@@ -52,6 +48,13 @@ import { CreateHumanresourcesDialogComponent } from './components/humanResources
 import { EditHumanresourcesComponent } from './components/humanResources/edit-humanresources/edit-humanresources.component';
 import { ShowOneHumanresourcesComponent } from './components/humanResources/show-one-humanresources/show-one-humanresources.component';
 import { ShowHumanresourcesComponent } from './components/humanResources/show-humanresources/show-humanresources.component';
+
+import { ProductCreateComponent } from './components/product/create/product-create/product-create.component';
+import { ProductDialogComponent } from './components/product/create/product-dialog/product-dialog.component';
+import { ProductShowComponent } from './components/product/show/product-show/product-show.component';
+import { ProductEditComponent } from './components/product/edit/product-edit/product-edit.component';
+import { ProductShowOneComponent } from './components/product/show/product-show-one/product-show-one.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,6 +85,7 @@ import { ShowHumanresourcesComponent } from './components/humanResources/show-hu
     BranchofficeEditComponent,
     BranchofficeShowComponent,
     BranchofficeShowOneComponent,
+
     ProductComponent,
     CreateProductComponent,
     EditProductComponent,
@@ -97,6 +101,13 @@ import { ShowHumanresourcesComponent } from './components/humanResources/show-hu
     EditHumanresourcesComponent,
     ShowOneHumanresourcesComponent,
     ShowHumanresourcesComponent
+
+    ProductCreateComponent,
+    ProductDialogComponent,
+    ProductShowComponent,
+    ProductEditComponent,
+    ProductShowOneComponent
+
   ],
   imports: [
     BrowserModule,

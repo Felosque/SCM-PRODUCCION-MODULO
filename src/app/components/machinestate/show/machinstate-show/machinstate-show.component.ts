@@ -14,7 +14,7 @@ export class MachinstateShowComponent implements OnInit {
   constructor(
     private _machinestateService: MachinestateService,
     private _route: ActivatedRoute,
-    private _router: Router 
+    private _router: Router
   ) { }
 
   ngOnInit(): void {
@@ -38,14 +38,13 @@ export class MachinstateShowComponent implements OnInit {
           icon: "success",
         });
         this._machinestateService.deleteMachine(code).subscribe(
-          response =>{
+          response => {
             this.ngOnInit();
           }
-        )
+        );
       } else {
         swal("Tranquilo/a su registro no se ha borrado");
       }
     });
   }
-
 }
