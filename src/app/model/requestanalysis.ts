@@ -1,6 +1,12 @@
 export class Requestanalysis {
     constructor(
         public code: number,
-        public requeststatus: number 
+        public requestStatus: any
+    ){}
+}
+
+export class RequestAnalysisPK {
+    constructor(
+        public requestAnalysisPK: Requestanalysis
     ){}
 }
