@@ -16,10 +16,15 @@ import { RequestanalysisEditComponent } from './components/requestanalysis/edit/
 import { BranchofficeShowComponent } from './components/branchoffice/show/branchoffice-show/branchoffice-show.component';
 import { BranchofficeShowOneComponent } from './components/branchoffice/show/branchoffice-show-one/branchoffice-show-one.component';
 import { BranchofficeEditComponent } from './components/branchoffice/edit/branchoffice-edit/branchoffice-edit.component';
-import {ShowProductAllComponent} from './components/product/show-product-all/show-product-all.component';
 import {ShowProductOneComponent} from './components/product/show-product-one/show-product-one.component';
 import {EditProductComponent} from './components/product/edit-product/edit-product.component';
 import {ProductComponent} from './components/product/product.component';
+import {ShowWorkshiftComponent} from './components/workShifts/show-workshift/show-workshift.component';
+import {EditWorkshiftComponent} from './components/workShifts/edit-workshift/edit-workshift.component';
+import {ShowOneWorkshiftComponent} from './components/workShifts/show-one-workshift/show-one-workshift.component';
+import {ShowHumanresourcesComponent} from './components/humanResources/show-humanresources/show-humanresources.component';
+import {EditHumanresourcesComponent} from './components/humanResources/edit-humanresources/edit-humanresources.component';
+import {ShowOneHumanresourcesComponent} from './components/humanResources/show-one-humanresources/show-one-humanresources.component';
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'home', component: HomeComponent},
@@ -40,7 +45,13 @@ const appRoutes: Routes = [
     {path: 'branchoffice/:code', component: BranchofficeEditComponent},
     {path: 'product', component: ProductComponent},
     {path: 'product/show/:code', component: ShowProductOneComponent},
-    {path: 'product/:code', component: EditProductComponent}
+    {path: 'product/:code', component: EditProductComponent},
+    {path: 'workshift', component: ShowWorkshiftComponent},
+    {path: 'workshift/:code', component: EditWorkshiftComponent},
+    {path: 'workshift/show/:code', component: ShowOneWorkshiftComponent},
+    {path: 'humanresource', component: ShowHumanresourcesComponent},
+    {path: 'humanresource/:code', component: EditHumanresourcesComponent},
+    {path: 'humanresource/show/:code', component: ShowOneHumanresourcesComponent}
 ];
 
 
