@@ -37,6 +37,18 @@ import { MatOptionModule } from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
+
+import { CreateWorkshiftComponent } from './components/workShifts/create-workshift/create-workshift.component';
+import { EditWorkshiftComponent } from './components/workShifts/edit-workshift/edit-workshift.component';
+import { ShowWorkshiftComponent } from './components/workShifts/show-workshift/show-workshift.component';
+import { ShowOneWorkshiftComponent } from './components/workShifts/show-one-workshift/show-one-workshift.component';
+import { CreateWorkshiftDialogComponent } from './components/workShifts/create-workshift-dialog/create-workshift-dialog.component';
+import { CreateHumanresourcesComponent } from './components/humanResources/create-humanresources/create-humanresources.component';
+import { CreateHumanresourcesDialogComponent } from './components/humanResources/create-humanresources-dialog/create-humanresources-dialog.component';
+import { EditHumanresourcesComponent } from './components/humanResources/edit-humanresources/edit-humanresources.component';
+import { ShowOneHumanresourcesComponent } from './components/humanResources/show-one-humanresources/show-one-humanresources.component';
+import { ShowHumanresourcesComponent } from './components/humanResources/show-humanresources/show-humanresources.component';
+
 import { ProductCreateComponent } from './components/product/create/product-create/product-create.component';
 import { ProductDialogComponent } from './components/product/create/product-dialog/product-dialog.component';
 import { ProductShowComponent } from './components/product/show/product-show/product-show.component';
@@ -73,11 +85,29 @@ import { ProductShowOneComponent } from './components/product/show/product-show-
     BranchofficeEditComponent,
     BranchofficeShowComponent,
     BranchofficeShowOneComponent,
+
+    ProductComponent,
+    CreateProductComponent,
+    EditProductComponent,
+    ShowProductOneComponent,
+    ShowProductAllComponent,
+    CreateWorkshiftComponent,
+    EditWorkshiftComponent,
+    ShowWorkshiftComponent,
+    ShowOneWorkshiftComponent,
+    CreateWorkshiftDialogComponent,
+    CreateHumanresourcesComponent,
+    CreateHumanresourcesDialogComponent,
+    EditHumanresourcesComponent,
+    ShowOneHumanresourcesComponent,
+    ShowHumanresourcesComponent
+
     ProductCreateComponent,
     ProductDialogComponent,
     ProductShowComponent,
     ProductEditComponent,
     ProductShowOneComponent
+
   ],
   imports: [
     BrowserModule,
