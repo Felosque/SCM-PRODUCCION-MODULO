@@ -6,12 +6,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { ShowComponent } from './components/crud/show/show.component';
-import { ProductionsComponent } from './productions/productions.component';
-import { AddProductionsComponent } from './productions/components/add-productions/add-productions.component';
-import {AddProductionsDialogComponent} from './productions/components/add-productions/add-productions-dialog/add-productions-dialog.component'
-import { EditProductionsComponent } from './productions/components/edit-productions/edit-productions.component';
-import { ListProductionsComponent } from './productions/components/list-productions/list-productions.component';
-import { ListOneProductionsComponent } from './productions/components/list-one-productions/list-one-productions.component';
+import { ProductionsComponent } from './components/entities/productions/productions.component';
+import { AddProductionsComponent } from './components/entities/productions/components/add-productions/add-productions.component';
+import {AddProductionsDialogComponent} from './components/entities/productions/components/add-productions/add-productions-dialog/add-productions-dialog.component'
+import { EditProductionsComponent } from './components/entities/productions/components/edit-productions/edit-productions.component';
+import { ListProductionsComponent } from './components/entities/productions/components/list-productions/list-productions.component';
+import { ListOneProductionsComponent } from './components/entities/productions/components/list-one-productions/list-one-productions.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -25,14 +25,32 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
-import { DialogConfirmationComponent } from './productions/components/dialog/dialog-confirmation/dialog-confirmation.component';
-import { DialogActionComponent } from './productions/components/dialog/dialog-action/dialog-action.component';
-import { AddRawMaterialRequestsComponent } from './components/rawMaterialRequests/add-raw-material-requests/add-raw-material-requests.component';
-import { EditRawMaterialRequestsComponent } from './components/rawMaterialRequests/edit-raw-material-requests/edit-raw-material-requests.component';
-import { ListRawMaterialRequestsComponent } from './components/rawMaterialRequests/list-raw-material-requests/list-raw-material-requests.component';
-import { ListOneRawMaterialRequestsComponent } from './components/rawMaterialRequests/list-one-raw-material-requests/list-one-raw-material-requests.component';
-import { AddRawMaterialRequestsDialogComponent } from './components/rawMaterialRequests/add-raw-material-requests/add-raw-material-requests-dialog/add-raw-material-requests-dialog.component';
-import { ShowDialogNumberBatchComponent } from './components/rawMaterialRequests/list-raw-material-requests/show-dialog-number-batch/show-dialog-number-batch.component';
+import { DialogConfirmationComponent } from './components/entities/productions/components/dialog/dialog-confirmation/dialog-confirmation.component';
+import { DialogActionComponent } from './components/entities/productions/components/dialog/dialog-action/dialog-action.component';
+import { AddRawMaterialRequestsComponent } from './components/entities/rawMaterialRequests/add-raw-material-requests/add-raw-material-requests.component';
+import { EditRawMaterialRequestsComponent } from './components/entities/rawMaterialRequests/edit-raw-material-requests/edit-raw-material-requests.component';
+import { ListRawMaterialRequestsComponent } from './components/entities/rawMaterialRequests/list-raw-material-requests/list-raw-material-requests.component';
+import { ListOneRawMaterialRequestsComponent } from './components/entities/rawMaterialRequests/list-one-raw-material-requests/list-one-raw-material-requests.component';
+import { AddRawMaterialRequestsDialogComponent } from './components/entities/rawMaterialRequests/add-raw-material-requests/add-raw-material-requests-dialog/add-raw-material-requests-dialog.component';
+import { ShowDialogNumberBatchComponent } from './components/entities/rawMaterialRequests/list-raw-material-requests/show-dialog-number-batch/show-dialog-number-batch.component';
+import { RawMaterialRequestsComponent } from './components/views/panel/raw-material-requests/raw-material-requests.component';
+import { PaneladminComponent } from './components/views/paneladmin/paneladmin.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { AddDetailsRawMaterialComponent } from './components/entities/detailsRawMaterial/add-details-raw-material/add-details-raw-material.component';
+import { ListDetailsRawMaterialComponent } from './components/entities/detailsRawMaterial/list-details-raw-material/list-details-raw-material.component';
+import { EditDetailsRawMaterialComponent } from './components/entities/detailsRawMaterial/edit-details-raw-material/edit-details-raw-material.component';
+import { ListOneDetailsRawMaterialComponent } from './components/entities/detailsRawMaterial/list-one-details-raw-material/list-one-details-raw-material.component';
+import { AddDetailsRawMaterialDialogComponent } from './components/entities/detailsRawMaterial/add-details-raw-material/add-details-raw-material-dialog/add-details-raw-material-dialog.component';
+import { DialogRawMaterialRequestsComponent } from './components/entities/detailsRawMaterial/list-details-raw-material/dialog-raw-material-requests/dialog-raw-material-requests.component';
+import { AddRawMaterialDeliveryComponent } from './components/entities/rawMaterialDelivery/add-raw-material-delivery/add-raw-material-delivery.component';
+import { ListRawMaterialDeliveryComponent } from './components/entities/rawMaterialDelivery/list-raw-material-delivery/list-raw-material-delivery.component';
+import { EditRawMaterialDeliveryComponent } from './components/entities/rawMaterialDelivery/edit-raw-material-delivery/edit-raw-material-delivery.component';
+import { ListOneRawMaterialDeliveryComponent } from './components/entities/rawMaterialDelivery/list-one-raw-material-delivery/list-one-raw-material-delivery.component';
+import { AddRawMaterialDeliveryDialogComponent } from './components/entities/rawMaterialDelivery/add-raw-material-delivery/add-raw-material-delivery-dialog/add-raw-material-delivery-dialog.component';
+import { ShowDialogRequestsComponent } from './components/entities/rawMaterialDelivery/list-raw-material-delivery/show-dialog-requests/show-dialog-requests.component';
+import { RequestDetailRawMaterialComponent } from './components/views/panel/request-detail-raw-material/request-detail-raw-material.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +71,22 @@ import { ShowDialogNumberBatchComponent } from './components/rawMaterialRequests
     ListRawMaterialRequestsComponent,
     ListOneRawMaterialRequestsComponent,
     AddRawMaterialRequestsDialogComponent,
-    ShowDialogNumberBatchComponent
+    ShowDialogNumberBatchComponent,
+    RawMaterialRequestsComponent,
+    PaneladminComponent,
+    AddDetailsRawMaterialComponent,
+    ListDetailsRawMaterialComponent,
+    EditDetailsRawMaterialComponent,
+    ListOneDetailsRawMaterialComponent,
+    AddDetailsRawMaterialDialogComponent,
+    DialogRawMaterialRequestsComponent,
+    AddRawMaterialDeliveryComponent,
+    ListRawMaterialDeliveryComponent,
+    EditRawMaterialDeliveryComponent,
+    ListOneRawMaterialDeliveryComponent,
+    AddRawMaterialDeliveryDialogComponent,
+    ShowDialogRequestsComponent,
+    RequestDetailRawMaterialComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +105,11 @@ import { ShowDialogNumberBatchComponent } from './components/rawMaterialRequests
     MatRadioModule,
     MatSelectModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
