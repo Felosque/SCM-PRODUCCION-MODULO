@@ -8,11 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class PaneladminComponent implements OnInit {
 
   public title_production_details: String;
+  public title_raw_material_requests: String
+  public title_detail_raw_material: String
 
   constructor() { }
 
   ngOnInit(): void {
     this.title_production_details = "Detalles de la producción"
+    this.title_raw_material_requests = "Solicitud materia prima"
+    this.title_detail_raw_material = "Detalle solicitud materia prima"
   }
 
 }

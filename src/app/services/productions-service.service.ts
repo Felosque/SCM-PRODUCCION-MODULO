@@ -18,6 +18,7 @@ export class ProductionsClass{
  export class ProductionsService {
     public url: string;
     constructor(private service: HttpClient) {this.url = Global.url;}
+    //readonly url = 'http://localhost:8089/scm-unibague/Production/'
     getAll(){
       return this.service.get<Productions[]>(this.url + 'Production/');
     }
