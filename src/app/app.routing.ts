@@ -21,6 +21,7 @@ import { PaneladminComponent } from './components/views/paneladmin/paneladmin.co
 import { PaneluserComponent } from './components/views/paneluser/paneluser.component';
 import { RequestbatchesShowOneComponent } from './components/entities/requestbatches/show/requestbatches-show-one/requestbatches-show-one.component';
 import { RequestbatchesEditComponent } from './components/entities/requestbatches/edit/requestbatches-edit/requestbatches-edit.component';
+
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'home', component: HomeComponent},
@@ -41,10 +42,10 @@ const appRoutes: Routes = [
     {path: 'branchoffice', component: BranchofficeShowComponent},
     {path: 'branchoffice/show/:code', component: BranchofficeShowOneComponent},
     {path: 'branchoffice/:code', component: BranchofficeEditComponent},
+
     {path: 'requestbatches', component: RequestbatchesShowComponent},
     {path: 'requestbatches/show/:code', component: RequestbatchesShowOneComponent},
     {path: 'requestbatches/:code', component: RequestbatchesEditComponent}
-    
 ];
 
 

@@ -44,14 +44,20 @@ import { RequestbatchesEditComponent } from './components/entities/requestbatche
 import { PaneladminComponent } from './components/views/paneladmin/paneladmin.component';
 import { PaneluserComponent } from './components/views/paneluser/paneluser.component';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+
 import {MatDatepickerModule} from '@angular/material/datepicker';
+
 import {MatInputModule} from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { BranchofficeService } from './services/branchoffice.services';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BranchofficeComponent } from './components/views/panel/branchoffice/branchoffice.component';
+
 import { RequestbatchesComponent } from './components/views/panel/requestbatches/requestbatches.component';
+
+import { RequestanalisisComponent } from './components/views/panel/requestanalisis/requestanalisis.component';
+
 
 @NgModule({
   declarations: [
@@ -91,7 +97,11 @@ import { RequestbatchesComponent } from './components/views/panel/requestbatches
     PaneladminComponent,
     PaneluserComponent,
     BranchofficeComponent,
-    RequestbatchesComponent
+
+    RequestbatchesComponent,
+
+    RequestanalisisComponent
+
   ],
   imports: [
     BrowserModule,
@@ -108,9 +118,9 @@ import { RequestbatchesComponent } from './components/views/panel/requestbatches
     MatSortModule,
     FormsModule,
     MatFormFieldModule,
+
     MatInputModule,
     MatDatepickerModule
-    
   ],
   providers: [BranchofficeService],
   bootstrap: [AppComponent]

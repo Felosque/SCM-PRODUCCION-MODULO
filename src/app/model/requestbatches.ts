@@ -7,5 +7,6 @@ export class RequestBatches {
         public requestDate: String,
         public production: Productions,
         public state: Requeststate
+
     ){}
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Router, ActivatedRoute } from '@angular/router';
 import { Global } from 'src/app/services/global';
 import { RequestbatchesService } from 'src/app/services/requestbatches.services';
@@ -25,11 +26,11 @@ export class RequestbatchesEditComponent implements OnInit {
     private _router: Router,
     private _route: ActivatedRoute,
     private _requestbatchesservice: RequestbatchesService
-  ) { 
-    this.requestbatches = new RequestBatches(null,"",null,null);
-    this.page_title = 'Editar Solicitud Lotes'
-    this.btn = 'Actualizar'
-    this.url = Global.url
+  ) {
+    this.requestbatches = new RequestBatches(null, '', null, null);
+    this.page_title = 'Editar Solicitud Lotes';
+    this.btn = 'Actualizar';
+    this.url = Global.url;
    }
 
   ngOnInit(): void {
@@ -57,32 +58,32 @@ export class RequestbatchesEditComponent implements OnInit {
 
   save(){
     swal({
-      title: "Estas seguro que deseas Actualizarlo?",
-      text: "cuidado estas apundo de actualizar un registro",
-      icon: "info",
+      title: 'Estas seguro que deseas Actualizarlo?',
+      text: 'cuidado estas apundo de actualizar un registro',
+      icon: 'info',
       buttons: [true, true],
       dangerMode: true,
     })
       .then((willDelete) => {
         if (willDelete) {
-          swal("Se Actualizo Correctamente", {
-            icon: "success",
+          swal('Se Actualizo Correctamente', {
+            icon: 'success',
           });
           this._requestbatchesservice.updateRequestbatch(this.requestbatches.code, this.requestbatches).subscribe(response => {
             this.status = 'success';
             this.requestbatches = response.requestbatches;
-            this._router.navigate(['/requestbatches'])
-            
-          })
+            this._router.navigate(['/requestbatches']);
+
+          });
         } else {
-          swal("Tranquilo/a su registro no se ha Actualizado");
+          swal('Tranquilo/a su registro no se ha Actualizado');
         }
       });
-      console.log(this.requestbatches)
+    console.log(this.requestbatches);
   }
   getrequestbatches() {
     this._route.params.subscribe(params => {
-      let code = params['code'];
+      const code = params.code;
       this._requestbatchesservice.getRequestbatch(code).subscribe(
         response => {
           this.requestbatches = response;
@@ -90,8 +91,8 @@ export class RequestbatchesEditComponent implements OnInit {
           console.log(error);
 
         }
-      )
-    })
+      );
+    });
   }
 
 }

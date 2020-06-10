@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params} from '@angular/router';
 import { Global } from 'src/app/services/global';
-import { RequestbatchesService } from 'src/app/services/requestbatches.services'
+import { RequestbatchesService } from 'src/app/services/requestbatches.services';
 import { RequestBatches } from 'src/app/model/requestbatches';
+
 @Component({
   selector: 'app-requestbatches-show-one',
   templateUrl: './requestbatches-show-one.component.html',
@@ -18,23 +19,23 @@ export class RequestbatchesShowOneComponent implements OnInit {
     private _requestbatchesService: RequestbatchesService,
     private _route: ActivatedRoute,
     private _router: Router
-  ) { 
+  ) {
     this.url = Global.url;
     this.title = 'Solicitud Lotes';
 
   }
 
   ngOnInit(): void {
-    this._route.params.subscribe(params =>{
-      let code = params['code'];
+    this._route.params.subscribe(params => {
+      const code = params.code;
       this._requestbatchesService.getRequestbatch(code).subscribe(
         response => {
           this.requestbatches = response;
-        },error => {
+        }, error => {
           console.log(error);
         }
-      )
-    })
+      );
+    });
   }
 
 }

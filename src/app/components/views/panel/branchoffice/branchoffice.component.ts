@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { BranchofficeService } from 'src/app/services/branchoffice.services'
+import { BranchofficeService } from 'src/app/services/branchoffice.services';
 import { Branchoffice } from 'src/app/model/branchoffice';
-import {MatTableDataSource} from '@angular/material/table'; 
+
+import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
+
 import { MatSort } from '@angular/material/sort';
 @Component({
   selector: 'app-branchoffice',
@@ -12,7 +14,7 @@ import { MatSort } from '@angular/material/sort';
 export class BranchofficeComponent implements OnInit {
 
   listbranch = new  MatTableDataSource<Branchoffice>();
-  headerbranch: string [] = ['code', 'address','enterpriseNit', 'stateBranchOffice'];
+  headerbranch: string [] = ['code', 'address', 'enterpriseNit', 'stateBranchOffice'];
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   constructor(

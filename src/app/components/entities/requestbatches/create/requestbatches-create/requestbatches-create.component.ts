@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Router } from '@angular/router';
 import { Global } from 'src/app/services/global';
 import { RequestbatchesService } from 'src/app/services/requestbatches.services';
@@ -7,6 +8,7 @@ import swal from 'sweetalert';
 import { Requeststate } from 'src/app/model/requeststatus';
 import { RequestAnalysisPK } from 'src/app/model/requestanalysis';
 import { Productions } from 'src/app/model/productions';
+
 @Component({
   selector: 'app-requestbatches-create',
   templateUrl: './requestbatches-create.component.html',
@@ -52,14 +54,14 @@ export class RequestbatchesCreateComponent implements OnInit {
   }
 
   save(){
-    
+
     this.requestbatchesservice.addRequestbatches(this.requestbatches).subscribe(response=>{
       if (this.status = 'success'){
         swal(
           'Sucursal creada!!',
           'La sucursal se ha creado correctamente',
           'success'
-        );      
+        );
         this.requestbatches = response.requestbatches;
       }else{
         this.status = 'error';
@@ -69,12 +71,13 @@ export class RequestbatchesCreateComponent implements OnInit {
           'error'
         );
       }
-      
+
     },error => {
       console.log(error);
       this.status = 'error'
     })
     console.log(this.requestbatches)
+
   }
 
 }

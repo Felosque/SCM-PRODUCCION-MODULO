@@ -4,18 +4,18 @@
     </div>
     <div class="form-body-edit">
         <form #requestbatchesForm="ngForm" (ngSubmit)="save()">
-            
+
             <label>fecha de solicitud: </label>
             <input type="text" name="requestDate" #requestDate="ngModel" [(ngModel)]="requestbatches.requestDate"
               class="form-control" readonly>
             <small *ngIf="!requestDate.valid && requestDate.touched" style="color: red;">
                 Debes seleccionar una fecha
             </small>
-                     
+
             <mat-form-field>
                 <mat-label style="color: #000000;">N° de lote:
                 </mat-label>
-                <mat-select name="productcode" #productcode="ngModel" 
+                <mat-select name="productcode" #productcode="ngModel"
                     [(ngModel)]="requestbatches.production" required>
                     <mat-option *ngFor="let listproduc of listproduction" [value]="listproduc">
                         {{listproduc.code}}
@@ -28,7 +28,7 @@
                 <mat-label style="color: #000000;">Estado actual:
                     <b>{{requestbatches.state.description}}</b>
                 </mat-label>
-                <mat-select name="descriptionstate" #descriptionstate="ngModel" 
+                <mat-select name="descriptionstate" #descriptionstate="ngModel"
                     [(ngModel)]="requestbatches.state" required>
                     <mat-option *ngFor="let liststate of liststaterequestbatches" [value]="liststate">
                         {{liststate.description}}
@@ -37,7 +37,7 @@
             </mat-form-field>
 
 
-            <button type="submit" class="btn btn-primary" 
+            <button type="submit" class="btn btn-primary"
             [disabled]="requestbatchesForm.invalid">Actualizar</button>
         </form>
         <div class="bn-cancel">

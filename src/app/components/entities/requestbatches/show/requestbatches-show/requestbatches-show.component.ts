@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router'
-import { RequestbatchesService } from 'src/app/services/requestbatches.services'
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import { RequestbatchesService } from 'src/app/services/requestbatches.services';
 import { RequestBatches } from 'src/app/model/requestbatches';
 import swal from 'sweetalert';
 @Component({
@@ -16,14 +16,14 @@ export class RequestbatchesShowComponent implements OnInit {
     private _requestbatchesService: RequestbatchesService,
     private _route: ActivatedRoute,
     private _router: Router
-  ) { 
-    this.title = 'Request batches'
+  ) {
+    this.title = 'Request batches';
    }
 
   ngOnInit(): void {
     this._requestbatchesService.getRequestbatches().subscribe(response => {
       this.requestbatches = response;
-    })
+    });
   }
 
 
@@ -44,7 +44,7 @@ export class RequestbatchesShowComponent implements OnInit {
             response => {
               this.ngOnInit();
             }
-          )
+          );
         } else {
           swal("Tranquilo/a su registro no se ha borrado");
         }
@@ -52,3 +52,4 @@ export class RequestbatchesShowComponent implements OnInit {
   }
 
 }
+

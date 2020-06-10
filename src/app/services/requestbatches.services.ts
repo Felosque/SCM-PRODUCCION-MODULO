@@ -1,16 +1,18 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http'
 import {Global} from '../services/global'
+
 import { Observable, from, Subject } from 'rxjs';
 import { Requeststate } from '../model/requeststatus';
 import { RequestAnalysisPK } from '../model/requestanalysis';
 import { Productions } from '../model/productions';
+
 @Injectable({
     providedIn: 'root'
 })
 export class RequestbatchesService {
     public url: string;
-    
+
     constructor(
         private _http: HttpClient
     ){
@@ -23,7 +25,9 @@ export class RequestbatchesService {
         let params= JSON.stringify(requestbatch);
         let headers = new
         HttpHeaders().set('Content-Type', 'application/json');
+
         return this._http.post(this.url+'/RequestBatches',params,{headers: headers});
+
     }
 
     getRequestbatches():Observable<any>{
@@ -50,10 +54,12 @@ export class RequestbatchesService {
         let params = JSON.stringify(requestbatch);
         let headers = new HttpHeaders().set('Content-Type', 'application/json');
         return this._http.put(this.url+'RequestBatches/'+code,params,{headers:headers});
+
     }
 
     deleteRequestbatch(code):Observable<any>{
         let headers = new HttpHeaders().set('Content-Type', 'application/json');
+
         return this._http.delete(this.url+'RequestBatches/'+code, {headers:headers});
     }
 
@@ -63,5 +69,6 @@ export class RequestbatchesService {
 
     filter(filterBy: string){
         this.listbatches.next(filterBy);
+
     }
 }

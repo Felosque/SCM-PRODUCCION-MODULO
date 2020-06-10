@@ -20,7 +20,7 @@
             <mat-form-field>
               <mat-label style="color: #000000;">N° de lote:
               </mat-label>
-              <mat-select name="productcode" #productcode="ngModel" 
+              <mat-select name="productcode" #productcode="ngModel"
                   [(ngModel)]="requestbatches.production" required>
                   <mat-option *ngFor="let listproduc of listproduction" [value]="listproduc">
                       {{listproduc.code}}
