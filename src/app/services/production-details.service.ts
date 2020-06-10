@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {ProductionDetails} from '../model/production-details'
 import {Global} from '../services/global'
+import { Observable, from, Subject } from 'rxjs';
 export class ProductionDetailsIdClass{
 
     constructor(
@@ -36,6 +37,7 @@ const getByIdComposite = (items, productsCode, productBatch) => {
 export class ProductionDetailsService {
 
     public url: string;
+    private listData = new Subject<string>();
     constructor(private service: HttpClient) { this.url = Global.url;}
 
     getAll(){
@@ -54,5 +56,11 @@ export class ProductionDetailsService {
       list = getByIdComposite(list, productsCode, productBatch);
       return list;
     }
-    
+    listDataDetails(): Observable<string>{
+      return this.listData.asObservable();
+    }
+
+    filter(filterBy: string){
+        this.listData.next(filterBy);
+    }
   }

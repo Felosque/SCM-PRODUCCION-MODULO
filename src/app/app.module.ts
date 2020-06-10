@@ -38,6 +38,7 @@ import { ListOneProductionDetailsComponent } from './components/entities/product
 import { EditProductionDetailsComponent } from './components/entities/production-details/edit-production-details/edit-production-details.component';
 import { AddProductionDetailsDialogComponent } from './components/entities/production-details/add-production-details/add-production-details-dialog/add-production-details-dialog.component';
 import { ShowDialogProductBatchComponent } from './components/entities/production-details/list-production-details/show-dialog-product-batch/show-dialog-product-batch.component';
+import {ProductionDetailsComponentPanel} from './components/views/panel/production-details/production-details.component'
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { ShowDialogProductBatchComponent } from './components/entities/productio
     ListOneProductionDetailsComponent,
     EditProductionDetailsComponent,
     AddProductionDetailsDialogComponent,
-    ShowDialogProductBatchComponent
+    ShowDialogProductBatchComponent,
+    ProductionDetailsComponentPanel
   ],
   imports: [
     BrowserModule,

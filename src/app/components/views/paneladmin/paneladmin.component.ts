@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaneladminComponent implements OnInit {
 
+  public title_production_details: String;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.title_production_details = "Detalles de la producción"
   }
 
 }
