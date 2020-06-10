@@ -1,0 +1,21 @@
+<p>paneladmin works!</p>
+<div class="panel-general">
+    <div class="panel-g">
+        <div class="paneladmin">
+            <div class="panel-header">
+                <h3>{{title_production_details}}</h3>
+            </div>
+            <div class="panel-body">
+                <div class="btn-add-panel">
+                    <a [routerLink]="['/production-details']"><i class="fas fa-info-circle"></i> admin productions details </a> &nbsp;&nbsp;
+                    <a [routerLink]="['/production-states']"><i class="fas fa-info-circle"></i> admin production states</a>
+                    <app-add-production-details-dialog></app-add-production-details-dialog>
+                     <app-add-production-states-dialog></app-add-production-states-dialog>
+                </div>
+                    <app-production-details-panel></app-production-details-panel>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br><br>
