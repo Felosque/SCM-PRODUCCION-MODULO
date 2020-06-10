@@ -12,14 +12,14 @@ export class HumanResourcesService {
   constructor(
     private http: HttpClient
   ){
-    this.url = Global.url + 'humanresource';
+    this.url = Global.url + 'HumanResource';
   }
 
   add(humanresource): Observable<any>{
-    let params= JSON.stringify(humanresource);
-    let headers = new
+    const params = JSON.stringify(humanresource);
+    const headers = new
     HttpHeaders().set('Content-Type', 'application/json');
-    return this.http.post(this.url, params,{headers : headers});
+    return this.http.post(this.url, params, {headers});
   }
 
   getAll(): Observable<any>{
@@ -31,14 +31,14 @@ export class HumanResourcesService {
   }
 
   update(code, humanresource): Observable<any>{
-    let params = JSON.stringify(humanresource);
-    let headers = new HttpHeaders().set('Content-Type', 'application/json');
-    return this.http.put(this.url + '/' + code,params,{headers:headers});
+    const params = JSON.stringify(humanresource);
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this.http.put(this.url + '/' + code, params, {headers});
   }
 
   delete(code): Observable<any>{
-    let headers = new HttpHeaders().set('Content-Type', 'application/json');
-    return this.http.delete(this.url + '/' + code, {headers:headers});
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this.http.delete(this.url + '/' + code, {headers});
   }
 
 }

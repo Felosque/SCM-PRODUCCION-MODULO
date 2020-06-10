@@ -9,34 +9,34 @@ export class MachinestateService {
     public url: string;
 
     constructor(
-        private _http: HttpClient
+        private http: HttpClient
     ){
         this.url = Global.url;
     }
 
-    addMachineState(machinestate):Observable<any>{
-        let params= JSON.stringify(machinestate);
-        let headers = new
+    addMachineState(machinestate): Observable<any>{
+        const params = JSON.stringify(machinestate);
+        const headers = new
         HttpHeaders().set('Content-Type', 'application/json');
-        return this._http.post(this.url + '/machinestate', params,{headers : headers});
+        return this.http.post(this.url + '/machinestate', params, {headers});
     }
 
-    getMachineStates():Observable<any>{
-        return this._http.get(this.url+'/machinestate');
+    getMachineStates(): Observable<any>{
+        return this.http.get(this.url + '/machinestate');
     }
 
-    getMachineState(machinestateId):Observable<any>{
-        return this._http.get(this.url+'machinestate/'+machinestateId);
+    getMachineState(machinestateId): Observable<any>{
+        return this.http.get(this.url + 'machinestate/' + machinestateId);
     }
 
-    updateMachineState(code, machinestate):Observable<any>{
-        let params = JSON.stringify(machinestate);
-        let headers = new HttpHeaders().set('Content-Type', 'application/json');
-        return this._http.put(this.url+'machinestate/'+code,params,{headers:headers});
+    updateMachineState(code, machinestate): Observable<any>{
+        const params = JSON.stringify(machinestate);
+        const headers = new HttpHeaders().set('Content-Type', 'application/json');
+        return this.http.put(this.url + 'machinestate/' + code, params, {headers});
     }
 
-    deleteMachine(code):Observable<any>{
-        let headers = new HttpHeaders().set('Content-Type', 'application/json');
-        return this._http.delete(this.url+'machinestate/'+code, {headers:headers});
+    deleteMachine(code): Observable<any>{
+        const headers = new HttpHeaders().set('Content-Type', 'application/json');
+        return this.http.delete(this.url + 'machinestate/' + code, {headers});
     }
 }

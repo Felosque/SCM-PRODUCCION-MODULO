@@ -10,34 +10,36 @@ export class RequeststateService {
     public url: string;
 
     constructor(
-        private _http: HttpClient
+        private http: HttpClient
     ){
         this.url = Global.url;
     }
 
-    addRequestStates(requeststate):Observable<any>{
-        let params= JSON.stringify(requeststate);
-        let headers = new
+    addRequestStates(requeststate): Observable<any>{
+        const params = JSON.stringify(requeststate);
+        const headers = new
         HttpHeaders().set('Content-Type', 'application/json');
-        return this._http.post(this.url+'/RequestStatus',params,{headers: headers});
+        return this.http.post(this.url + '/RequestStatus', params, {headers});
     }
 
-    getRequestStates():Observable<any>{
-        return this._http.get(this.url+'/RequestStatus');
+    getRequestStates(): Observable<any>{
+        return this.http.get(this.url + '/RequestStatus');
     }
 
-    getRequestState(RequestStateCode):Observable<any>{
-        return this._http.get(this.url+'RequestStatus/'+RequestStateCode);
+    getRequestState(RequestStateCode): Observable<any>{
+        return this.http.get(this.url + 'RequestStatus/' + RequestStateCode);
     }
 
-    updateRequestState(code, requeststate):Observable<any>{
-        let params = JSON.stringify(requeststate);
-        let headers = new HttpHeaders().set('Content-Type', 'application/json');
-        return this._http.put(this.url+'RequestStatus/'+code,params,{headers:headers});
+
+
+    updateRequestState(code, requeststate): Observable<any>{
+        const params = JSON.stringify(requeststate);
+        const headers = new HttpHeaders().set('Content-Type', 'application/json');
+        return this.http.put(this.url + 'RequestStatus/' + code, params, {headers});
     }
 
-    deleteRequeststate(code):Observable<any>{
-        let headers = new HttpHeaders().set('Content-Type', 'application/json');
-        return this._http.delete(this.url+'RequestStatus/'+code, {headers:headers});
+    deleteRequeststate(code): Observable<any>{
+        const headers = new HttpHeaders().set('Content-Type', 'application/json');
+        return this.http.delete(this.url + 'RequestStatus/' + code, {headers});
     }
 }

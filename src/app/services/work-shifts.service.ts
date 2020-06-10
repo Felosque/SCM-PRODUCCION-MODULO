@@ -11,14 +11,14 @@ export class WorkShiftsService {
   constructor(
     private http: HttpClient
   ){
-    this.url = Global.url + 'workshift';
+    this.url = Global.url + 'WorkShift';
   }
 
   add(workshift): Observable<any>{
-    let params= JSON.stringify(workshift);
-    let headers = new
+    const params = JSON.stringify(workshift);
+    const headers = new
     HttpHeaders().set('Content-Type', 'application/json');
-    return this.http.post(this.url, params,{headers : headers});
+    return this.http.post(this.url, params, {headers});
   }
 
   getAll(): Observable<any>{
@@ -30,14 +30,14 @@ export class WorkShiftsService {
   }
 
   update(code, workshift): Observable<any>{
-    let params = JSON.stringify(workshift);
-    let headers = new HttpHeaders().set('Content-Type', 'application/json');
-    return this.http.put(this.url + '/' + code,params,{headers:headers});
+    const params = JSON.stringify(workshift);
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this.http.put(this.url + '/' + code, params, {headers});
   }
 
   delete(code): Observable<any>{
-    let headers = new HttpHeaders().set('Content-Type', 'application/json');
-    return this.http.delete(this.url + '/' + code, {headers:headers});
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this.http.delete(this.url + '/' + code, {headers});
   }
 
 }

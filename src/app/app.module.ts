@@ -2,58 +2,82 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {routing, appRoutingProviders} from './app.routing';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule}from '@angular/forms';
+import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
-import { MachinstateCreateComponent } from './components/machinestate/create/machinstate-create/machinstate-create.component';
-import { MachinstateShowComponent } from './components/machinestate/show/machinstate-show/machinstate-show.component';
+import { MachinstateCreateComponent } from './components/entities/machinestate/create/machinstate-create/machinstate-create.component';
+import { MachinstateShowComponent } from './components/entities/machinestate/show/machinstate-show/machinstate-show.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MachinstateDialogComponent } from './components/machinestate/create/machinstate-dialog/machinstate-dialog.component';
-import { MachinestateEditComponent } from './components/machinestate/edit/machinestate-edit/machinestate-edit.component';
-import { MachinestateShowOneComponent } from './components/machinestate/show/machinestate-show-one/machinestate-show-one.component';
-import { RequeststatusShowComponent } from './components/requeststatus/show/requeststatus-show/requeststatus-show.component';
-import { RequeststatusShowOneComponent } from './components/requeststatus/show/requeststatus-show-one/requeststatus-show-one.component';
-import { RequeststatusEditComponent } from './components/requeststatus/edit/requeststatus-edit/requeststatus-edit.component';
-import { RequeststatusCreateComponent } from './components/requeststatus/create/requeststatus-create/requeststatus-create.component';
-import { RequeststatusCreateDialogComponent } from './components/requeststatus/create/requeststatus-create-dialog/requeststatus-create-dialog.component';
-import { StatebranchofficeCreateDialogComponent } from './components/statebranchoffice/create/statebranchoffice-create-dialog/statebranchoffice-create-dialog.component';
-import { StatebranchofficeCreateComponent } from './components/statebranchoffice/create/statebranchoffice-create/statebranchoffice-create.component';
-import { StatebranchofficeEditComponent } from './components/statebranchoffice/edit/statebranchoffice-edit/statebranchoffice-edit.component';
-import { StatebranchofficeShowComponent } from './components/statebranchoffice/show/statebranchoffice-show/statebranchoffice-show.component';
-import { StatebranchofficeShowOneComponent } from './components/statebranchoffice/show/statebranchoffice-show-one/statebranchoffice-show-one.component';
+import { MachinstateDialogComponent } from './components/entities/machinestate/create/machinstate-dialog/machinstate-dialog.component';
+import { MachinestateEditComponent } from './components/entities/machinestate/edit/machinestate-edit/machinestate-edit.component';
+import { MachinestateShowOneComponent } from './components/entities/machinestate/show/machinestate-show-one/machinestate-show-one.component';
+import { RequeststatusShowComponent } from './components/entities/requeststatus/show/requeststatus-show/requeststatus-show.component';
+import { RequeststatusShowOneComponent } from './components/entities/requeststatus/show/requeststatus-show-one/requeststatus-show-one.component';
+import { RequeststatusEditComponent } from './components/entities/requeststatus/edit/requeststatus-edit/requeststatus-edit.component';
+import { RequeststatusCreateComponent } from './components/entities/requeststatus/create/requeststatus-create/requeststatus-create.component';
+import { RequeststatusCreateDialogComponent } from './components/entities/requeststatus/create/requeststatus-create-dialog/requeststatus-create-dialog.component';
+import { StatebranchofficeCreateDialogComponent } from './components/entities/statebranchoffice/create/statebranchoffice-create-dialog/statebranchoffice-create-dialog.component';
+import { StatebranchofficeCreateComponent } from './components/entities/statebranchoffice/create/statebranchoffice-create/statebranchoffice-create.component';
+import { StatebranchofficeEditComponent } from './components/entities/statebranchoffice/edit/statebranchoffice-edit/statebranchoffice-edit.component';
+import { StatebranchofficeShowComponent } from './components/entities/statebranchoffice/show/statebranchoffice-show/statebranchoffice-show.component';
+import { StatebranchofficeShowOneComponent } from './components/entities/statebranchoffice/show/statebranchoffice-show-one/statebranchoffice-show-one.component';
 import { HomeComponent } from './components/home/home.component';
-import { RequestanalysisShowComponent } from './components/requestanalysis/show/requestanalysis-show/requestanalysis-show.component';
-import { RequestanalysisShowOneComponent } from './components/requestanalysis/show/requestanalysis-show-one/requestanalysis-show-one.component';
-import { RequestanalysisEditComponent } from './components/requestanalysis/edit/requestanalysis-edit/requestanalysis-edit.component';
-import { RequestanalysisCreateComponent } from './components/requestanalysis/create/requestanalysis-create/requestanalysis-create.component';
-import { RequestanalysisCreateDialogComponent } from './components/requestanalysis/create/requestanalysis-create-dialog/requestanalysis-create-dialog.component';
-import { BranchofficeCreateDialogComponent } from './components/branchoffice/create/branchoffice-create-dialog/branchoffice-create-dialog.component';
-import { BranchofficeCreateComponent } from './components/branchoffice/create/branchoffice-create/branchoffice-create.component';
-import { BranchofficeEditComponent } from './components/branchoffice/edit/branchoffice-edit/branchoffice-edit.component';
-import { BranchofficeShowComponent } from './components/branchoffice/show/branchoffice-show/branchoffice-show.component';
-import { BranchofficeShowOneComponent } from './components/branchoffice/show/branchoffice-show-one/branchoffice-show-one.component';
+import { RequestanalysisShowComponent } from './components/entities/requestanalysis/show/requestanalysis-show/requestanalysis-show.component';
+import { RequestanalysisShowOneComponent } from './components/entities/requestanalysis/show/requestanalysis-show-one/requestanalysis-show-one.component';
+import { RequestanalysisEditComponent } from './components/entities/requestanalysis/edit/requestanalysis-edit/requestanalysis-edit.component';
+import { RequestanalysisCreateComponent } from './components/entities/requestanalysis/create/requestanalysis-create/requestanalysis-create.component';
+import { RequestanalysisCreateDialogComponent } from './components/entities/requestanalysis/create/requestanalysis-create-dialog/requestanalysis-create-dialog.component';
+import { BranchofficeCreateDialogComponent } from './components/entities/branchoffice/create/branchoffice-create-dialog/branchoffice-create-dialog.component';
+import { BranchofficeCreateComponent } from './components/entities/branchoffice/create/branchoffice-create/branchoffice-create.component';
+import { BranchofficeEditComponent } from './components/entities/branchoffice/edit/branchoffice-edit/branchoffice-edit.component';
+import { BranchofficeShowComponent } from './components/entities/branchoffice/show/branchoffice-show/branchoffice-show.component';
+import { BranchofficeShowOneComponent } from './components/entities/branchoffice/show/branchoffice-show-one/branchoffice-show-one.component';
 import { MatOptionModule } from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
+
 import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
 
-import { CreateWorkshiftComponent } from './components/workShifts/create-workshift/create-workshift.component';
-import { EditWorkshiftComponent } from './components/workShifts/edit-workshift/edit-workshift.component';
-import { ShowWorkshiftComponent } from './components/workShifts/show-workshift/show-workshift.component';
-import { ShowOneWorkshiftComponent } from './components/workShifts/show-one-workshift/show-one-workshift.component';
-import { CreateWorkshiftDialogComponent } from './components/workShifts/create-workshift-dialog/create-workshift-dialog.component';
-import { CreateHumanresourcesComponent } from './components/humanResources/create-humanresources/create-humanresources.component';
-import { CreateHumanresourcesDialogComponent } from './components/humanResources/create-humanresources-dialog/create-humanresources-dialog.component';
-import { EditHumanresourcesComponent } from './components/humanResources/edit-humanresources/edit-humanresources.component';
-import { ShowOneHumanresourcesComponent } from './components/humanResources/show-one-humanresources/show-one-humanresources.component';
-import { ShowHumanresourcesComponent } from './components/humanResources/show-humanresources/show-humanresources.component';
+import { CreateWorkshiftComponent } from './components/entities/workShifts/create-workshift/create-workshift.component';
+import { EditWorkshiftComponent } from './components/entities/workShifts/edit-workshift/edit-workshift.component';
+import { ShowWorkshiftComponent } from './components/entities/workShifts/show-workshift/show-workshift.component';
+import { ShowOneWorkshiftComponent } from './components/entities/workShifts/show-one-workshift/show-one-workshift.component';
+import { CreateWorkshiftDialogComponent } from './components/entities/workShifts/create-workshift-dialog/create-workshift-dialog.component';
+import { CreateHumanresourcesComponent } from './components/entities/humanResources/create-humanresources/create-humanresources.component';
+import { CreateHumanresourcesDialogComponent } from './components/entities/humanResources/create-humanresources-dialog/create-humanresources-dialog.component';
+import { EditHumanresourcesComponent } from './components/entities/humanResources/edit-humanresources/edit-humanresources.component';
+import { ShowOneHumanresourcesComponent } from './components/entities/humanResources/show-one-humanresources/show-one-humanresources.component';
+import { ShowHumanresourcesComponent } from './components/entities/humanResources/show-humanresources/show-humanresources.component';
 
-import { ProductCreateComponent } from './components/product/create/product-create/product-create.component';
-import { ProductDialogComponent } from './components/product/create/product-dialog/product-dialog.component';
-import { ProductShowComponent } from './components/product/show/product-show/product-show.component';
-import { ProductEditComponent } from './components/product/edit/product-edit/product-edit.component';
-import { ProductShowOneComponent } from './components/product/show/product-show-one/product-show-one.component';
+import { ProductCreateComponent } from './components/entities/product/create/product-create/product-create.component';
+import { ProductDialogComponent } from './components/entities/product/create/product-dialog/product-dialog.component';
+import { ProductShowComponent } from './components/entities/product/show/product-show/product-show.component';
+import { ProductEditComponent } from './components/entities/product/edit/product-edit/product-edit.component';
+import { ProductShowOneComponent } from './components/entities/product/show/product-show-one/product-show-one.component';
+
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { RequestbatchesShowComponent } from './components/entities/requestbatches/show/requestbatches-show/requestbatches-show.component';
+import { RequestbatchesShowOneComponent } from './components/entities/requestbatches/show/requestbatches-show-one/requestbatches-show-one.component';
+import { RequestbatchesCreateComponent } from './components/entities/requestbatches/create/requestbatches-create/requestbatches-create.component';
+import { RequestbatchesCreateDialogComponent } from './components/entities/requestbatches/create/requestbatches-create-dialog/requestbatches-create-dialog.component';
+import { RequestbatchesEditComponent } from './components/entities/requestbatches/edit/requestbatches-edit/requestbatches-edit.component';
+import { PaneladminComponent } from './components/views/paneladmin/paneladmin.component';
+import { PaneluserComponent } from './components/views/paneluser/paneluser.component';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
+import {MatInputModule} from '@angular/material/input';
+import { MatSortModule } from '@angular/material/sort';
+import { BranchofficeService } from './services/branchoffice.services';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { BranchofficeComponent } from './components/views/panel/branchoffice/branchoffice.component';
+
+import { RequestbatchesComponent } from './components/views/panel/requestbatches/requestbatches.component';
+
+import { RequestanalisisComponent } from './components/views/panel/requestanalisis/requestanalisis.component';
+
 
 @NgModule({
   declarations: [
@@ -100,7 +124,21 @@ import { ProductShowOneComponent } from './components/product/show/product-show-
     ProductDialogComponent,
     ProductShowComponent,
     ProductEditComponent,
-    ProductShowOneComponent
+    ProductShowOneComponent,
+
+    RequestbatchesShowComponent,
+    RequestbatchesShowOneComponent,
+    RequestbatchesCreateComponent,
+    RequestbatchesCreateDialogComponent,
+    RequestbatchesEditComponent,
+    PaneladminComponent,
+    PaneluserComponent,
+    BranchofficeComponent,
+
+    RequestbatchesComponent,
+
+    RequestanalisisComponent
+
 
   ],
   imports: [
@@ -112,11 +150,22 @@ import { ProductShowOneComponent } from './components/product/show/product-show-
     MatDialogModule,
     MatOptionModule,
     MatSelectModule,
+
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+
+    MatPaginatorModule,
+    MatSnackBarModule,
+    MatTableModule,
+    MatSortModule,
+    FormsModule,
+    MatFormFieldModule,
+
+    MatInputModule,
+    MatDatepickerModule
 
   ],
-  providers: [],
+  providers: [BranchofficeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

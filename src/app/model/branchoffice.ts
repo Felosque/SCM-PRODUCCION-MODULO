@@ -1,8 +1,8 @@
 export class Branchoffice {
     constructor(
         public code: number,
-        public address: String,
-        public enterpriseNit: String,
-        public stateBranchOffice: number 
+        public address: string,
+        public enterpriseNit: string,
+        public stateBranchOffice: any
     ){}
 }

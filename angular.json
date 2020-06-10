@@ -125,6 +125,8 @@
   },
   "defaultProject": "CRM-produccion-FrontEnd",
   "cli": {
-    "analytics": "6181f39b-fc08-4c00-b244-64ca0865f99a"
+
+    "analytics": "2f4bc485-698d-491e-a1d2-ce888d682ed1"
+
   }
 }
