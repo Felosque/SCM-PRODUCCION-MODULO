@@ -6,7 +6,7 @@
     <form #productForm="ngForm" (ngSubmit)="save()">
       <label>Nombre</label>
       <input name="name" #name="ngModel"
-             [(ngModel)]="product.name" required pattern="[a-zA-Z]+">
+             [(ngModel)]="product.name" required pattern="[a-zA-Z0-9 ]+">
       <small *ngIf="!name.valid && name.touched" style="color: red;">
         Nombre invalido
       </small>

@@ -10,7 +10,7 @@
             <label>Nombre</label>
             <input type="text" name="nombre" #name="ngModel"
                    [(ngModel)]="product.name" class="form-control"
-                   placeholder="Escriba el nombre del producto" required pattern="[a-zA-Z]+">
+                   placeholder="Escriba el nombre del producto" required pattern="[a-zA-Z0-9 ]+">
             <small *ngIf="!name.valid && name.touched" style="color: red;">
               Nombre invalido
             </small>

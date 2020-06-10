@@ -19,7 +19,7 @@
             <label>Name</label>
             <input type="text" name="name" #name="ngModel"
                    [(ngModel)]="humanresource.name" class="form-control"
-                   placeholder="escriba la descripcion" required pattern="[a-zA-Z0-9]+">
+                   placeholder="escriba la descripcion" required pattern="[a-zA-Z0-9 ]+">
             <small *ngIf="!name.valid && name.touched" style="color: red;">
               nombre invalido solo texto
             </small>
