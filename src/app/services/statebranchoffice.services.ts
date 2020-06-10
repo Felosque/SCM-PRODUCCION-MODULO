@@ -9,34 +9,34 @@ import { Observable, from } from 'rxjs';
 export class StateBranchOfficeService {
     public url: string;
     constructor(
-        private _http: HttpClient
+        private http: HttpClient
     ){
         this.url = Global.url;
     }
 
-    addStateBranchOffice(statebranchOffice):Observable<any>{
-        let params= JSON.stringify(statebranchOffice);
-        let headers = new
+    addStateBranchOffice(statebranchOffice): Observable<any>{
+        const params = JSON.stringify(statebranchOffice);
+        const headers = new
         HttpHeaders().set('Content-Type', 'application/json');
-        return this._http.post(this.url+'/StateBranchOffice',params,{headers: headers});
+        return this.http.post(this.url + '/StateBranchOffice', params, {headers});
     }
 
-    getStatesBranchOffice():Observable<any>{
-        return this._http.get(this.url+'/StateBranchOffice');
+    getStatesBranchOffice(): Observable<any>{
+        return this.http.get(this.url + '/StateBranchOffice');
     }
 
-    getStateBranchOffice(StateBranchOfficeCode):Observable<any>{
-        return this._http.get(this.url+'StateBranchOffice/'+StateBranchOfficeCode);
+    getStateBranchOffice(StateBranchOfficeCode): Observable<any>{
+        return this.http.get(this.url + 'StateBranchOffice/' + StateBranchOfficeCode);
     }
 
-    updateStateBranchOffice(code, requeststate):Observable<any>{
-        let params = JSON.stringify(requeststate);
-        let headers = new HttpHeaders().set('Content-Type', 'application/json');
-        return this._http.put(this.url+'StateBranchOffice/'+code,params,{headers:headers});
+    updateStateBranchOffice(code, requeststate): Observable<any>{
+        const params = JSON.stringify(requeststate);
+        const headers = new HttpHeaders().set('Content-Type', 'application/json');
+        return this.http.put(this.url + 'StateBranchOffice/' + code, params, {headers});
     }
 
-    deleteStateBranchOffice(code):Observable<any>{
-        let headers = new HttpHeaders().set('Content-Type', 'application/json');
-        return this._http.delete(this.url+'StateBranchOffice/'+code, {headers:headers});
+    deleteStateBranchOffice(code): Observable<any>{
+        const headers = new HttpHeaders().set('Content-Type', 'application/json');
+        return this.http.delete(this.url + 'StateBranchOffice/' + code, {headers});
     }
 }
