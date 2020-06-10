@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { RequestbatchesService } from 'src/app/services/requestbatches.services';
+import { RequestbatchesService } from 'src/app/services/requestbatches.services'
 import { RequestBatches } from 'src/app/model/requestbatches';
-import {MatTableDataSource} from '@angular/material/table';
+import {MatTableDataSource} from '@angular/material/table'; 
 import {MatPaginator} from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 @Component({
@@ -11,17 +11,18 @@ import { MatSort } from '@angular/material/sort';
 })
 export class RequestbatchesComponent implements OnInit {
 
+
   listrequestbatches = new  MatTableDataSource<RequestBatches>();
-  headerequestbatches: string [] = ['code', 'requestDate',
-                                    'production', 'startproduc',
+  headerequestbatches: string [] = ['code', 'requestDate', 
+                                    'production', 'startproduc', 
                                     'endtproduc', 'state'];
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   constructor(
-    private requestbatchesService: RequestbatchesService
+    private _requestbatchesService: RequestbatchesService
     ) {
-    this.requestbatchesService.listabatches().subscribe(
-      (d: string) => {
+    this._requestbatchesService.listabatches().subscribe(
+      (d: string) =>{
         this.showbatch();
       }
     );
@@ -29,15 +30,16 @@ export class RequestbatchesComponent implements OnInit {
 
   ngOnInit(): void {
     this.showbatch();
+    
   }
 
 
   showbatch(){
-    this.requestbatchesService.getRequestbatches().subscribe(response => {
+    this._requestbatchesService.getRequestbatches().subscribe(response => {
       this.listrequestbatches = new MatTableDataSource<RequestBatches>(response);
       this.listrequestbatches.sort = this.sort;
       this.listrequestbatches.paginator = this.paginator;
-    });
+    })
   }
 
   applyFilterbatch(valueFilter: string){

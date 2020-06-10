@@ -6,26 +6,24 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class PaneladminComponent implements OnInit {
 
-  public titleOne: string;
-  public titleTwo: string;
-  public titleThree: string;
+  public title_one: String
+  public title_two: String
+  public title_three: String
 
   constructor(
-  ) {
-
-
-    this.titleOne = 'Sucursales';
-    this.titleTwo = 'Maquinaria';
-
-    this.titleThree = 'Solicitud lotes';
-
+  ) { 
+    
+    
+    this.title_one = 'Sucursales'
+    this.title_two = 'Maquinaria'
+    this.title_three = 'Solicitud lotes'
   }
-
+  
   ngOnInit(): void {
-
+    
   }
 
-
+  
 
 
 

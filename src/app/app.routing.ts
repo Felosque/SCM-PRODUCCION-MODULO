@@ -35,6 +35,7 @@ import { PaneluserComponent } from './components/views/paneluser/paneluser.compo
 import { RequestbatchesShowOneComponent } from './components/entities/requestbatches/show/requestbatches-show-one/requestbatches-show-one.component';
 import { RequestbatchesEditComponent } from './components/entities/requestbatches/edit/requestbatches-edit/requestbatches-edit.component';
 
+import { TimeremainingComponent } from './components/views/panel/timeremaining/timeremaining.component';
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
@@ -70,7 +71,10 @@ const appRoutes: Routes = [
 
     {path: 'requestbatches', component: RequestbatchesShowComponent},
     {path: 'requestbatches/show/:code', component: RequestbatchesShowOneComponent},
-    {path: 'requestbatches/:code', component: RequestbatchesEditComponent}
+    {path: 'requestbatches/:code', component: RequestbatchesEditComponent},
+
+    {path: 'paneluser', component: PaneluserComponent},
+    {path: 'info', component: TimeremainingComponent}
 
 ];
 

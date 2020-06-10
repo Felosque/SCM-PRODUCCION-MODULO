@@ -2,10 +2,10 @@
     <div class="panel-g">
         <div class="paneladmin">
             <div class="panel-header">
-                <h3>{{titleOne}}</h3>
+                <h3>{{title_one}}</h3>
             </div>
             <div class="panel-body">
-
+    
                 <div class="btn-add-panel">
                     <a [routerLink]="['/StateBranchOffice']"><i class="fas fa-info-circle"></i> admin estate </a> &nbsp;&nbsp;
                     <a [routerLink]="['/branchoffice']"><i class="fas fa-info-circle"></i> admin sucursal</a>
@@ -15,10 +15,10 @@
                 <app-branchoffice></app-branchoffice>
             </div>
         </div>
-
+    
         <div class="paneladmin">
             <div class="panel-header">
-                <h3>{{titleTwo}}</h3>
+                <h3>{{title_two}}</h3>
             </div>
             <div class="panel-body">
                 <div class="btn-add-panel">
@@ -27,9 +27,7 @@
                     <app-statebranchoffice-create-dialog></app-statebranchoffice-create-dialog>
                     <app-branchoffice-create-dialog></app-branchoffice-create-dialog>
                 </div>
-
-                 <app-branchoffice></app-branchoffice> <!-- AQUI VA EL COMPONENTE DE MAQUINA -->
-
+                  <!-- AQUI VA EL COMPONENTE DE MAQUINA -->
             </div>
         </div>
     </div>
@@ -38,25 +36,23 @@
     <div class="panel-g">
         <div class="paneladmin">
             <div class="panel-header">
-                <h3>{{titleThree}}</h3>
+                <h3>{{title_three}}</h3>
             </div>
             <div class="panel-body">
                 <div class="btn-add-panel">
-
                     <a [routerLink]="['/requestbatches']"><i class="fas fa-info-circle"></i> Solicitud Lotes</a>
                     <app-requestbatches-create-dialog></app-requestbatches-create-dialog>
                 </div>
                     <app-requestbatches></app-requestbatches>
-
             </div>
         </div>
 
         <div class="paneladmin">
             <div class="panel-header">
-                <h3>{{titleThree}}</h3>
+                <h3>{{title_three}}</h3>
             </div>
             <div class="panel-body">
-
+                
             </div>
         </div>
     </div>

@@ -4,10 +4,10 @@ import {Productions} from '../model/productions';
 import {Global} from '../services/global';
 export class ProductionsClass{
   constructor(
-    public createDate: string,
-    public expirationDate: string,
-    public startOrderDate: string,
-    public time: string,
+    public createDate: String,
+    public expirationDate: String,
+    public startOrderDate: String,
+    public time: String,
   ) {}
 
 }

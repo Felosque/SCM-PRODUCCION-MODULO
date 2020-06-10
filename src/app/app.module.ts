@@ -76,7 +76,21 @@ import { BranchofficeComponent } from './components/views/panel/branchoffice/bra
 
 import { RequestbatchesComponent } from './components/views/panel/requestbatches/requestbatches.component';
 
-import { RequestanalisisComponent } from './components/views/panel/requestanalisis/requestanalisis.component';
+import { InfoShowComponent } from './components/info/info-show/info-show.component';
+import { InfoShowDialogComponent } from './components/info/info-show-dialog/info-show-dialog.component';
+import { TimeremainingComponent } from './components/views/panel/timeremaining/timeremaining.component';
+import { InfomachineryComponent } from './components/views/panel/infomachinery/infomachinery.component';
+import { MachinerydisponibleDialogComponent } from './components/views/panel/listmachinery/disponibles/machinerydisponible-dialog/machinerydisponible-dialog.component';
+import { MachinerydisponibleComponent } from './components/views/panel/listmachinery/disponibles/machinerydisponible/machinerydisponible.component';
+import { MachineryocupadaComponent } from './components/views/panel/listmachinery/ocupadas/machineryocupada/machineryocupada.component';
+import { MachineryocupadaDialogComponent } from './components/views/panel/listmachinery/ocupadas/machineryocupada-dialog/machineryocupada-dialog.component';
+import { MachinerymtoDialogComponent } from './components/views/panel/listmachinery/mto/machinerymto-dialog/machinerymto-dialog.component';
+import { MachinerymtoComponent } from './components/views/panel/listmachinery/mto/machinerymto/machinerymto.component';
+import { MachineryreparacionDialogComponent } from './components/views/panel/listmachinery/reparacion/machineryreparacion-dialog/machineryreparacion-dialog.component';
+import { MachineryreparacionComponent } from './components/views/panel/listmachinery/reparacion/machineryreparacion/machineryreparacion.component';
+import { OtherinfoComponent } from './components/views/panel/otherinfo/otherinfo.component';
+import { HumanresourceComponent } from './components/views/panel/humanresources/humanresource/humanresource.component';
+import { HumanresourceDialogComponent } from './components/views/panel/humanresources/humanresource-dialog/humanresource-dialog.component';
 
 
 @NgModule({
@@ -137,9 +151,21 @@ import { RequestanalisisComponent } from './components/views/panel/requestanalis
 
     RequestbatchesComponent,
 
-    RequestanalisisComponent
-
-
+    InfoShowComponent,
+    InfoShowDialogComponent,
+    TimeremainingComponent,
+    InfomachineryComponent,
+    MachinerydisponibleDialogComponent,
+    MachinerydisponibleComponent,
+    MachineryocupadaComponent,
+    MachineryocupadaDialogComponent,
+    MachinerymtoDialogComponent,
+    MachinerymtoComponent,
+    MachineryreparacionDialogComponent,
+    MachineryreparacionComponent,
+    OtherinfoComponent,
+    HumanresourceComponent,
+    HumanresourceDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -163,7 +189,6 @@ import { RequestanalisisComponent } from './components/views/panel/requestanalis
 
     MatInputModule,
     MatDatepickerModule
-
   ],
   providers: [BranchofficeService],
   bootstrap: [AppComponent]
