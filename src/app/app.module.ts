@@ -25,8 +25,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
-import { DialogConfirmationComponent } from './components/entities/productions/components/dialog/dialog-confirmation/dialog-confirmation.component';
-import { DialogActionComponent } from './components/entities/productions/components/dialog/dialog-action/dialog-action.component';
+import { DialogConfirmationProductionsComponent } from './components/entities/productions/components/dialog/dialog-confirmation/dialog-confirmation.component';
+import { DialogActionProductionsComponent } from './components/entities/productions/components/dialog/dialog-action/dialog-action.component';
 import { AddRawMaterialRequestsComponent } from './components/entities/rawMaterialRequests/add-raw-material-requests/add-raw-material-requests.component';
 import { EditRawMaterialRequestsComponent } from './components/entities/rawMaterialRequests/edit-raw-material-requests/edit-raw-material-requests.component';
 import { ListRawMaterialRequestsComponent } from './components/entities/rawMaterialRequests/list-raw-material-requests/list-raw-material-requests.component';
@@ -64,8 +64,8 @@ import { RequestDetailRawMaterialComponent } from './components/views/panel/requ
     EditProductionsComponent,
     ListProductionsComponent,
     ListOneProductionsComponent,
-    DialogConfirmationComponent,
-    DialogActionComponent,
+    DialogConfirmationProductionsComponent,
+    DialogActionProductionsComponent,
     AddRawMaterialRequestsComponent,
     EditRawMaterialRequestsComponent,
     ListRawMaterialRequestsComponent,

@@ -6,9 +6,9 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   templateUrl: './dialog-confirmation.component.html',
   styleUrls: ['./dialog-confirmation.component.css']
 })
-export class DialogConfirmationComponent implements OnInit {
+export class DialogConfirmationProductionsComponent implements OnInit {
 
-  constructor(public dialogo: MatDialogRef<DialogConfirmationComponent>,
+  constructor(public dialogo: MatDialogRef<DialogConfirmationProductionsComponent>,
     @Inject(MAT_DIALOG_DATA) public mensaje: string) { }
 
     cerrarDialogo(): void {

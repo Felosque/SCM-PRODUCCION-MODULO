@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from "@angular/material/dialog";
-import {DialogConfirmationComponent} from '../../productions/components/dialog/dialog-confirmation/dialog-confirmation.component'
+import {DialogConfirmationProductionsComponent} from '../../productions/components/dialog/dialog-confirmation/dialog-confirmation.component'
 import {DialogActionComponent} from '../dialog/dialog-action/dialog-action.component'
 import {RequestsDetailsRawMaterial} from '../../../../model/RequestsDetailsRawMaterial'
 import {RequestsDetailsRawMaterialService} from '../../../../services/requests_details_raw_material.service'
@@ -27,7 +27,7 @@ export class ListDetailsRawMaterialComponent implements OnInit {
   }
   mostrarDialogo(id): void {
     this.dialogo
-      .open(DialogConfirmationComponent, {
+      .open(DialogConfirmationProductionsComponent, {
         data: `¿Estas seguro de eliminar?`
       })
       .afterClosed()

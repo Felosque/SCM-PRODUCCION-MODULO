@@ -6,9 +6,9 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   templateUrl: './dialog-action.component.html',
   styleUrls: ['./dialog-action.component.css']
 })
-export class DialogActionComponent implements OnInit {
+export class DialogActionProductionsComponent implements OnInit {
 
-  constructor(public dialogo: MatDialogRef<DialogActionComponent>, @Inject(MAT_DIALOG_DATA) public mensaje: string) { }
+  constructor(public dialogo: MatDialogRef<DialogActionProductionsComponent>, @Inject(MAT_DIALOG_DATA) public mensaje: string) { }
 
   ngOnInit(): void {
   }

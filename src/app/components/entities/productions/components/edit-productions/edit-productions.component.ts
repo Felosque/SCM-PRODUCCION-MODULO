@@ -4,7 +4,7 @@ import {ProductionsService, ProductionsClass} from '../../../../../services/prod
 import { Router, ActivatedRoute } from '@angular/router';
 import {DateAdapter} from '@angular/material/core';
 import { MatDialog } from "@angular/material/dialog";
-import {DialogActionComponent} from '../dialog/dialog-action/dialog-action.component'
+import {DialogActionProductionsComponent} from '../dialog/dialog-action/dialog-action.component'
 
 @Component({
   selector: 'app-edit-productions',
@@ -33,14 +33,14 @@ export class EditProductionsComponent implements OnInit {
   }
   showDialogSuccesful(): void {
     this.dialogo
-    .open(DialogActionComponent, {
+    .open(DialogActionProductionsComponent, {
       data: `Actualizado con Exito`
     })
     .afterClosed()
   }
   showDialogError(): void {
     this.dialogo
-    .open(DialogActionComponent, {
+    .open(DialogActionProductionsComponent, {
       data: `Error. No se ha actualizado el elemento.`
     })
     .afterClosed()

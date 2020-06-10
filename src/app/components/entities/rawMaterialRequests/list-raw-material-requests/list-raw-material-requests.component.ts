@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {RawMaterialRequests} from '../../../../model/rawMaterialRequests'
 import {RawMaterialRequestsService} from '../../../../services/rawMaterialRequests-service.service'
 import { MatDialog } from "@angular/material/dialog";
-import {DialogConfirmationComponent} from '../../productions/components/dialog/dialog-confirmation/dialog-confirmation.component'
+import {DialogConfirmationProductionsComponent} from '../../productions/components/dialog/dialog-confirmation/dialog-confirmation.component'
 import {DialogActionComponent} from '../dialog/dialog-action/dialog-action.component'
 import {ShowDialogNumberBatchComponent} from './show-dialog-number-batch/show-dialog-number-batch.component'
 
@@ -28,7 +28,7 @@ export class ListRawMaterialRequestsComponent implements OnInit {
 
   mostrarDialogo(id): void {
     this.dialogo
-      .open(DialogConfirmationComponent, {
+      .open(DialogConfirmationProductionsComponent, {
         data: `¿Estas seguro de eliminar?`
       })
       .afterClosed()

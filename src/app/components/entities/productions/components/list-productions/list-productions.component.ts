@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Productions} from '../../../../../model/productions'
 import {ProductionsService} from '../../../../../services/productions-service.service'
 import { MatDialog } from "@angular/material/dialog";
-import { DialogConfirmationComponent } from "../dialog/dialog-confirmation/dialog-confirmation.component";
-import {DialogActionComponent} from '../dialog/dialog-action/dialog-action.component'
+import { DialogConfirmationProductionsComponent } from "../dialog/dialog-confirmation/dialog-confirmation.component";
+import {DialogActionProductionsComponent} from '../dialog/dialog-action/dialog-action.component'
 @Component({
   selector: 'app-list-productions',
   templateUrl: './list-productions.component.html',
@@ -25,7 +25,7 @@ export class ListProductionsComponent implements OnInit {
   }
   mostrarDialogo(id): void {
     this.dialogo
-      .open(DialogConfirmationComponent, {
+      .open(DialogConfirmationProductionsComponent, {
         data: `¿Estas seguro de eliminar?`
       })
       .afterClosed()
@@ -37,14 +37,14 @@ export class ListProductionsComponent implements OnInit {
   }
   showDialogSuccesful(): void {
     this.dialogo
-    .open(DialogActionComponent, {
+    .open(DialogActionProductionsComponent, {
       data: `Eliminado con Exito`
     })
     .afterClosed()
   }
   showDialogError(): void {
     this.dialogo
-    .open(DialogActionComponent, {
+    .open(DialogActionProductionsComponent, {
       data: `Error. No se ha eliminado el elemento.`
     })
     .afterClosed()

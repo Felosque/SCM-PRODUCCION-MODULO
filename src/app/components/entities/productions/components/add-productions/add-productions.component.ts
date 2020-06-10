@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import {ProductionsService, ProductionsClass} from '../../../../../services/productions-service.service'
 import {DateAdapter} from '@angular/material/core';
 import { MatDialog } from "@angular/material/dialog";
-import {DialogActionComponent} from '../dialog/dialog-action/dialog-action.component'
+import {DialogActionProductionsComponent} from '../dialog/dialog-action/dialog-action.component'
 @Component({
   selector: 'app-add-productions',
   templateUrl: './add-productions.component.html',
@@ -28,14 +28,14 @@ export class AddProductionsComponent implements OnInit {
   }
   showDialogSuccesful(): void {
     this.dialogo
-    .open(DialogActionComponent, {
+    .open(DialogActionProductionsComponent, {
       data: `Guardado con Exito`
     })
     .afterClosed()
   }
   showDialogError(): void {
     this.dialogo
-    .open(DialogActionComponent, {
+    .open(DialogActionProductionsComponent, {
       data: `Error. No se ha guarado el elemento.`
     })
     .afterClosed()
