@@ -3,7 +3,7 @@
     <h2>{{title}}</h2>
   </div>
   <div class="tab-body">
-    <div class="btn-agregar"><app-create-machinery-dialog></app-create-machinery-dialog></div>
+    <div class="btn-agregar"><button [routerLink]="['/paneladmin']" class="bn-return">regresar al panel</button></div>
     <table class="tab">
       <tr>
         <th>Codigo</th>
@@ -34,4 +34,10 @@
 
        </table>
      </div>
+  <div>
+    <a [routerLink]="['/branchoffice']"><i class="fas fa-info-circle"></i> admin branchOffices </a>
+    <a [routerLink]="['/machinestate']"><i class="fas fa-info-circle"></i> admin machineStates </a>
+    <a [routerLink]="['/humanresource']"><i class="fas fa-info-circle"></i> admin humanResource </a>
+    <a [routerLink]="['/machineryType']"><i class="fas fa-info-circle"></i> admin machineryTypes </a>
+  </div>
    </div>

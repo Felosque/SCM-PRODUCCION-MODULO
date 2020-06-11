@@ -3,7 +3,7 @@
     <h2>{{title}}</h2>
   </div>
   <div class="tab-body">
-    <div class="btn-agregar"><app-create-humanresources-dialog></app-create-humanresources-dialog></div>
+    <div class="btn-agregar"><button [routerLink]="['/paneladmin']" class="bn-return">regresar al panel</button></div>
     <table class="tab">
       <tr>
         <th>Codigo</th>
@@ -26,4 +26,5 @@
 
        </table>
      </div>
+  <a [routerLink]="['/workshift']"><i class="fas fa-info-circle"></i> admin workshifts </a>
    </div>

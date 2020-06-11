@@ -163,6 +163,7 @@ import { ListOneRawMaterialDeliveryComponent } from './components/entities/rawMa
 import { AddRawMaterialDeliveryDialogComponent } from './components/entities/rawMaterialDelivery/add-raw-material-delivery/add-raw-material-delivery-dialog/add-raw-material-delivery-dialog.component';
 import { ShowDialogRequestsComponent } from './components/entities/rawMaterialDelivery/list-raw-material-delivery/show-dialog-requests/show-dialog-requests.component';
 import { RequestDetailRawMaterialComponent } from './components/views/panel/request-detail-raw-material/request-detail-raw-material.component';
+import {MachineryComponent} from './components/views/panel/machinery/machinery.component';
 
 
 @NgModule({
@@ -256,6 +257,7 @@ import { RequestDetailRawMaterialComponent } from './components/views/panel/requ
     OtherinfoComponent,
     HumanresourceComponent,
     HumanresourceDialogComponent,
+    MachineryComponent,
 // Lo de Duber
     ProductionStatesComponent,
     AddProductionStatesComponent,

@@ -22,12 +22,12 @@
             </div>
             <div class="panel-body">
                 <div class="btn-add-panel">
-                    <a [routerLink]="['/machinestate']"><i class="fas fa-info-circle"></i> admin estate </a> &nbsp;&nbsp;
-                    <a [routerLink]="['/branchoffice']"><i class="fas fa-info-circle"></i> admin maquinaria</a>
-                    <app-statebranchoffice-create-dialog></app-statebranchoffice-create-dialog>
-                    <app-branchoffice-create-dialog></app-branchoffice-create-dialog>
+                    <a [routerLink]="['/humanresource']"><i class="fas fa-info-circle"></i> admin recursos humanos </a> &nbsp;&nbsp;
+                    <a [routerLink]="['/machinery']"><i class="fas fa-info-circle"></i> admin maquinaria</a>
+                    <app-create-humanresources-dialog></app-create-humanresources-dialog>
+                    <app-create-machinery-dialog></app-create-machinery-dialog>
                 </div>
-                  <!-- AQUI VA EL COMPONENTE DE MAQUINA -->
+                  <app-machinery></app-machinery>
             </div>
         </div>
     </div>

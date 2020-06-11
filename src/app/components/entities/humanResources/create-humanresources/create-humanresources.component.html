@@ -25,15 +25,22 @@
             </small>
           </div>
           <div class="col p-1">
-            <mat-form-field>
-              <mat-label>Workshift</mat-label>
-              <mat-select name="workshift" #workshift="ngModel"
+            <div class="row">
+              <div class="column">
+                <mat-form-field>
+                  <mat-label>Workshift</mat-label>
+                  <mat-select name="workshift" #workshift="ngModel"
                           [(ngModel)]="humanresource.workShift" required >
-                <mat-option *ngFor="let workshift of workshifts" [value]="workshift">
-                  {{workshift.description}}
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
+                    <mat-option *ngFor="let workshift of workshifts" [value]="workshift">
+                      {{workshift.description}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div>
+                <app-create-workshift-dialog></app-create-workshift-dialog>
+              </div>
+            </div>
           </div>
         </div>
         <button type="submit" class="btn btn-primary" [disabled]="machinestateForm.invalid">{{btn}}</button>
