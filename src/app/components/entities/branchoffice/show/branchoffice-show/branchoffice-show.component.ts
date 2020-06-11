@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router'
 import { BranchofficeService } from 'src/app/services/branchoffice.services'
-import { Branchoffice } from 'src/app/model/branchoffice';
+import { BranchOffice } from 'src/app/model/branchOffice';
 import swal from 'sweetalert';
 @Component({
   selector: 'app-branchoffice-show',
@@ -10,7 +10,7 @@ import swal from 'sweetalert';
 })
 export class BranchofficeShowComponent implements OnInit {
 
-  public branchoffices: Branchoffice[];
+  public branchoffices: BranchOffice[];
   public title = "Datos de Sucursales";
   constructor(
     private _branchofficeService: BranchofficeService

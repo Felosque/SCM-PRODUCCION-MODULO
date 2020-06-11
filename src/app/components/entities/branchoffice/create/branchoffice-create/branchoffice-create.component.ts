@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Branchoffice } from 'src/app/model/branchoffice';
+import { BranchOffice } from 'src/app/model/branchOffice';
 import { Router } from '@angular/router';
 import { BranchofficeService } from 'src/app/services/branchoffice.services';
 import { error } from 'protractor';
@@ -11,7 +11,7 @@ import swal from 'sweetalert';
   styleUrls: ['./branchoffice-create.component.css']
 })
 export class BranchofficeCreateComponent implements OnInit {
-  public branchoffice: Branchoffice;
+  public branchoffice: BranchOffice;
   liststateBranchOffice: StateBranchOffice[] = [];
   public page_title: String
   public status: String;
@@ -19,8 +19,8 @@ export class BranchofficeCreateComponent implements OnInit {
   constructor(
     private router: Router,
     private branchofficeService: BranchofficeService
-  ) { 
-    this.branchoffice = new Branchoffice(null,"","",0);
+  ) {
+    this.branchoffice = new BranchOffice(null,"","",0);
     this.page_title = 'Crear Sucursal'
     this.btn = 'Guardar'
   }
@@ -46,7 +46,7 @@ export class BranchofficeCreateComponent implements OnInit {
           'Sucursal creada!!',
           'La sucursal se ha creado correctamente',
           'success'
-        );      
+        );
         this.branchoffice = response.branchoffice;
       }else{
         this.status = 'error';

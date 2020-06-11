@@ -59,6 +59,12 @@ import {EditDetailsRawMaterialComponent} from './components/entities/detailsRawM
 import {ListRawMaterialDeliveryComponent} from './components/entities/rawMaterialDelivery/list-raw-material-delivery/list-raw-material-delivery.component';
 import {ListOneRawMaterialDeliveryComponent} from './components/entities/rawMaterialDelivery/list-one-raw-material-delivery/list-one-raw-material-delivery.component';
 import {EditRawMaterialDeliveryComponent} from './components/entities/rawMaterialDelivery/edit-raw-material-delivery/edit-raw-material-delivery.component';
+import {ShowMachineryTypeComponent} from './components/entities/machineryType/show-machineryType/show-machineryType.component';
+import {EditMachineryTypeComponent} from './components/entities/machineryType/edit-machineryType/edit-machineryType.component';
+import {ShowOneMachineryTypeComponent} from './components/entities/machineryType/show-one-machineryType/show-one-machineryType.component';
+import {ShowMachineryComponent} from './components/entities/machinery/show-machinery/show-machinery.component';
+import {EditMachineryComponent} from './components/entities/machinery/edit-machinery/edit-machinery.component';
+import {ShowOneMachineryComponent} from './components/entities/machinery/show-one-machinery/show-one-machinery.component';
 
 
 const appRoutes: Routes = [
@@ -88,6 +94,14 @@ const appRoutes: Routes = [
     {path: 'process', component: ProcessShowComponent},
     {path: 'process/show/:code', component: ProcessShowOneComponent},
     {path: 'process/:code', component: ProcessEditComponent},
+
+    {path: 'machineryType', component: ShowMachineryTypeComponent},
+    {path: 'machineryType/:code', component: EditMachineryTypeComponent},
+    {path: 'machineryType/show/:code', component: ShowOneMachineryTypeComponent},
+
+    {path: 'machinery', component: ShowMachineryComponent},
+    {path: 'machinery/:code', component: EditMachineryComponent},
+    {path: 'machinery/show/:code', component: ShowOneMachineryComponent},
 
     {path: 'workshift', component: ShowWorkshiftComponent},
     {path: 'workshift/:code', component: EditWorkshiftComponent},

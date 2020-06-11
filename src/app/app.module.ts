@@ -39,6 +39,18 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
 
+import { CreateMachineryComponent } from './components/entities/machinery/create-machinery/create-machinery.component';
+import { EditMachineryComponent } from './components/entities/machinery/edit-machinery/edit-machinery.component';
+import { ShowMachineryComponent } from './components/entities/machinery/show-machinery/show-machinery.component';
+import { ShowOneMachineryComponent } from './components/entities/machinery/show-one-machinery/show-one-machinery.component';
+import { CreateMachineryDialogComponent } from './components/entities/machinery/create-machinery-dialog/create-machinery-dialog.component';
+
+import { CreateMachineryTypeComponent } from './components/entities/machineryType/create-machineryType/create-machineryType.component';
+import { EditMachineryTypeComponent } from './components/entities/machineryType/edit-machineryType/edit-machineryType.component';
+import { ShowMachineryTypeComponent } from './components/entities/machineryType/show-machineryType/show-machineryType.component';
+import { ShowOneMachineryTypeComponent } from './components/entities/machineryType/show-one-machineryType/show-one-machineryType.component';
+import { CreateMachineryTypeDialogComponent } from './components/entities/machineryType/create-machineryType-dialog/create-machineryType-dialog.component';
+
 import { CreateWorkshiftComponent } from './components/entities/workShifts/create-workshift/create-workshift.component';
 import { EditWorkshiftComponent } from './components/entities/workShifts/edit-workshift/edit-workshift.component';
 import { ShowWorkshiftComponent } from './components/entities/workShifts/show-workshift/show-workshift.component';
@@ -183,6 +195,18 @@ import { RequestDetailRawMaterialComponent } from './components/views/panel/requ
     BranchofficeEditComponent,
     BranchofficeShowComponent,
     BranchofficeShowOneComponent,
+
+    CreateMachineryTypeComponent,
+    EditMachineryTypeComponent,
+    ShowMachineryTypeComponent,
+    ShowOneMachineryTypeComponent,
+    CreateMachineryTypeDialogComponent,
+
+    CreateMachineryComponent,
+    EditMachineryComponent,
+    ShowMachineryComponent,
+    ShowOneMachineryComponent,
+    CreateMachineryDialogComponent,
 
     CreateWorkshiftComponent,
     EditWorkshiftComponent,

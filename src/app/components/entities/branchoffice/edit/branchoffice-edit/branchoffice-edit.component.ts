@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Global } from 'src/app/services/global';
 import { BranchofficeService } from 'src/app/services/branchoffice.services';
-import { Branchoffice } from 'src/app/model/branchoffice';
+import { BranchOffice } from 'src/app/model/branchOffice';
 import { StateBranchOffice } from 'src/app/model/stateBranchOffice';
 import swal from 'sweetalert';
 @Component({
@@ -13,7 +13,7 @@ import swal from 'sweetalert';
 })
 export class BranchofficeEditComponent implements OnInit {
   public status: String;
-  public branchoffice: Branchoffice;
+  public branchoffice: BranchOffice;
   liststateBranchOffice: StateBranchOffice[] = [];
   public page_title: String;
   public btn: String;
@@ -23,7 +23,7 @@ export class BranchofficeEditComponent implements OnInit {
     private _route: ActivatedRoute,
     private _branchofficeService: BranchofficeService
   ) {
-    this.branchoffice = new Branchoffice(null, '', '', null);
+    this.branchoffice = new BranchOffice(null, '', '', null);
     this.page_title = 'Editar Sucursal';
     this.btn = 'Actualizar';
     this.url = Global.url;

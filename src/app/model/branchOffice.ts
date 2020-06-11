@@ -1,4 +1,4 @@
-export class Branchoffice {
+export class BranchOffice {
     constructor(
         public code: number,
         public address: string,

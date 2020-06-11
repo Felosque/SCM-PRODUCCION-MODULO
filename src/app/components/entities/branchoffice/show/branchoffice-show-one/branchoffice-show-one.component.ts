@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params} from '@angular/router';
 import { Global } from 'src/app/services/global';
 import { BranchofficeService } from 'src/app/services/branchoffice.services';
-import { Branchoffice } from 'src/app/model/branchoffice';
+import { BranchOffice } from 'src/app/model/branchOffice';
 import { StateBranchOffice } from 'src/app/model/stateBranchOffice';
 @Component({
   selector: 'app-branchoffice-show-one',
@@ -11,7 +11,7 @@ import { StateBranchOffice } from 'src/app/model/stateBranchOffice';
 })
 export class BranchofficeShowOneComponent implements OnInit {
 
-  public branchoffice: Branchoffice;
+  public branchoffice: BranchOffice;
   public stateBranchOffice: StateBranchOffice;
   public description: number;
   public url: string;
