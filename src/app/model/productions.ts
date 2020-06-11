@@ -1,7 +1,8 @@
+
 export interface Productions {
     code: number;
-    createDate: string;
-    expirationDate: string;
-    startOrderDate: string;
-    time: string;
+    createDate: String;
+    expirationDate: String;
+    startOrderDate: String;
+    time: String;
 }

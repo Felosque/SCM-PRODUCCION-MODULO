@@ -6,24 +6,33 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class PaneladminComponent implements OnInit {
 
-  public title_one: String
-  public title_two: String
-  public title_three: String
+  public title_one: string;
+  public title_two: string;
+  public title_three: string;
+
+  // Duber
+  public title_production_details: string;
+  public title_raw_material_requests: string;
+  public title_detail_raw_material: string;
 
   constructor(
-  ) { 
-    
-    
-    this.title_one = 'Sucursales'
-    this.title_two = 'Maquinaria'
-    this.title_three = 'Solicitud lotes'
-  }
-  
-  ngOnInit(): void {
-    
+  ) {
+
+
+
   }
 
-  
+  ngOnInit(): void {
+    this.title_one = 'Sucursales';
+    this.title_two = 'Maquinaria';
+    this.title_three = 'Solicitud lotes';
+
+    this.title_production_details = 'Detalles de la producción';
+    this.title_raw_material_requests = 'Solicitud materia prima';
+    this.title_detail_raw_material = 'Detalle solicitud materia prima';
+  }
+
+
 
 
 
